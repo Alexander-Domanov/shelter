@@ -1,0 +1,15 @@
+@import url('./base/reset.css');
+@import url('./base/normalize.css');
+@import url('./base/variables.css');
+@import url('./base/typography.css');
+@import url('./components/container.css');
+@import url('./components/header.css');
+/*@import url('./components/hero.css');*/
+/*@import url('./components/about.css');*/
+/*@import url('./components/pets.css');*/
+/*@import url('./components/help.css');*/
+/*@import url('./components/donation.css');*/
+/*@import url('./components/footer.css');*/
+/*@import url('main-page.css');*/
+/*@import url('pets-page.css');*/
+/*@import url('media.css');*/

@@ -1,0 +1,116 @@
+@import url('../base/variables.css');
+/* ==========================================================================
+   2026 MODERN RESET — Zero Specificity, Accessibility, Defensive
+   ========================================================================== */
+
+/* 1. Layout Stability — Global box-sizing (one of the few justified global rules)
+   -------------------------------------------------------------------------- */
+* {
+    box-sizing: border-box;
+}
+
+/* 2. Scrollbar Stabilization — Prevents content jumps when scrollbar appears
+   -------------------------------------------------------------------------- */
+html {
+    scrollbar-gutter: stable;
+    overflow-x: clip;
+    scroll-behavior: smooth;
+}
+
+/* 3. Core Body Styles
+   -------------------------------------------------------------------------- */
+body {
+    margin: 0;
+    min-height: 100dvh;          /* Dynamic viewport height — no jumps on mobile */
+    width: 100%;
+
+    /* Retina font smoothing */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* 4. Reset margins & padding for common elements (NOT * selector)
+   -------------------------------------------------------------------------- */
+h1, h2, h3, h4, h5, h6,
+p, ul, ol, figure, blockquote,
+dl, dd {
+    margin: 0;
+    padding: 0;
+}
+
+/* 5. Remove list markers
+   -------------------------------------------------------------------------- */
+ul, ol {
+    list-style: none;
+}
+
+/* 6. Modern media handling — responsive images without overflow
+   -------------------------------------------------------------------------- */
+img, picture, video, canvas, svg {
+    display: block;
+    max-inline-size: 100%;
+    block-size: auto;
+}
+
+/* 7. Clean links — no underline, inherit color
+   -------------------------------------------------------------------------- */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* 8. Adaptive buttons & form inputs
+   -------------------------------------------------------------------------- */
+button, input, textarea, select {
+    font: inherit;
+    letter-spacing: inherit;
+    word-spacing: inherit;
+    color: inherit;
+}
+
+button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+/* 9. Prevent widows & orphans — better text wrapping
+   -------------------------------------------------------------------------- */
+h1, h2, h3, h4 {
+    text-wrap: pretty;
+}
+p {
+    text-wrap: pretty;
+}
+
+/* 10. Interface-specific resets
+   -------------------------------------------------------------------------- */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+textarea {
+    resize: vertical;
+}
+
+/* 11. Accessibility — Custom focus ring (not the ugly default outline)
+   -------------------------------------------------------------------------- */
+:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+}
+
+/* 12. Accessibility — Respect user's motion preferences
+   -------------------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
