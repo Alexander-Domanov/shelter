@@ -45,4 +45,17 @@
     --padding-container: clamp(0.625rem, 0rem + 3.125vw, 2.5rem);
     --padding-section-top: clamp(2.625rem, 1.8333rem + 3.9583vw, 5rem);
     --padding-section-bottom: clamp(2.625rem, 1.4167rem + 6.0417vw, 6.25rem);
+
+    /* ==========================================================================
+     Button
+     ========================================================================== */
+    --button-border-radius: 9999px;
+    --button-padding-y: 0.9375rem;
+    --button-padding-x: 2.8125rem;
+    --button-width: 12.9375rem;
+    --button-height: 3.25rem;
+    --button-font-size: 1.0625rem;
+    --button-line-height: 1.3;
+    --button-letter-spacing: 0.06em;
+    --button-transition: all 0.2s ease-in-out;
 }

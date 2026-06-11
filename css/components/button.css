@@ -1,0 +1,29 @@
+@import url('../base/variables.css');
+
+/* ==========================================================================
+   Buttons
+   ========================================================================== */
+
+.hero__button {
+    max-width: var(--button-width);
+    max-height: var(--button-height);
+    padding: var(--button-padding-y) var(--button-padding-x);
+
+    background-color: var(--color-primary);
+    border-radius: var(--button-border-radius);
+    
+    font-family: var(--font-family-serif);
+    font-size: var(--button-font-size);
+    line-height: var(--button-line-height);
+    letter-spacing: var(--button-letter-spacing);
+    color: var(--color-dark-3xl);
+    text-align: center;
+    white-space: nowrap;
+
+    cursor: pointer;
+    transition: var(--button-transition);
+}
+
+.hero__button:hover {
+    background-color: var(--color-primary-light);
+}

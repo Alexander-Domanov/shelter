@@ -9,7 +9,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
     padding-top: clamp(1.875rem, 1.875rem + 0vw, 1.875rem);
 }
 
@@ -18,12 +17,12 @@
    ========================================================================== */
 
 .header__subtitle {
-    font-size: 0.8125rem;
-    letter-spacing: 0.1em;
     margin-top: 9px;
     text-align: center;
     
-    color: var(--color-light-xl)
+    font-size: 0.8125rem;
+    letter-spacing: 0.1em;
+    color: var(--color-light-xl);
 }
 
 /* ==========================================================================
@@ -39,13 +38,16 @@
 
 /* Navigation Links */
 .header__nav a {
-    color: var(--color-dark-s);
     border-bottom: 3px solid transparent;
+    
+    color: var(--color-dark-s);
+    
     transition: border-color 0.3s ease;
 }
 
 /* Hover state */
 .header__nav a:hover {
-    color: var(--color-light-s);
     border-bottom-color: var(--color-primary);
+    
+    color: var(--color-light-s);
 }
