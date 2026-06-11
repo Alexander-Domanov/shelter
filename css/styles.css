@@ -4,7 +4,7 @@
 @import url('./base/typography.css');
 @import url('./components/container.css');
 @import url('./components/header.css');
-/*@import url('./components/hero.css');*/
+@import url('./components/hero.css');
 /*@import url('./components/about.css');*/
 /*@import url('./components/pets.css');*/
 /*@import url('./components/help.css');*/

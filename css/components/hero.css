@@ -1,0 +1,43 @@
+@import url('../base/variables.css');
+
+/* ==========================================================================
+   Hero Container
+   ========================================================================== */
+
+.hero__container {
+    min-height: 728px;
+    display: flex;
+    justify-content: space-between;
+    padding-top: clamp(3.75rem, 3.125rem + 3.125vw, 5.625rem);
+}
+
+/* ==========================================================================
+   Hero Content (left column with text)
+   ========================================================================== */
+
+.hero__content {
+    margin-top: 10.1875rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.625rem;
+    max-width: min(100%, 460px);
+}
+
+.hero__title {
+    max-width: 310px;
+}
+
+.hero__subtitle {
+    overflow-wrap: break-word;
+}
+
+
+/* ==========================================================================
+   Hero Image (right column)
+   ========================================================================== */
+
+.hero__image img {
+    display: block;
+    width: 100%;
+    height: auto;
+}

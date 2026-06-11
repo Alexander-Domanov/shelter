@@ -20,6 +20,8 @@
 .header__subtitle {
     font-size: 0.8125rem;
     letter-spacing: 0.1em;
+    margin-top: 9px;
+    text-align: center;
     
     color: var(--color-light-xl)
 }
