@@ -3,15 +3,16 @@
 /* ==========================================================================
    About Container
    ========================================================================== */
-
-.about__container {
+.about {
     padding-top: var(--padding-section-top);
     padding-bottom: var(--padding-section-bottom);
-    
+}
+
+.about__container {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 6.35rem;
+    gap: 7.20rem;
 }
 
 .about__content {
@@ -22,12 +23,8 @@
     max-width: 430px;
 }
 
-.about__title {
-    color: rgba(84, 84, 84, 1);
-}
-
 .about__text {
-    color: rgba(76, 76, 76, 1);
+    color: var(--color-dark-l);
     font-size: 0.9375rem;
     line-height: 1.6;
 }

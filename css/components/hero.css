@@ -5,9 +5,11 @@
    ========================================================================== */
 
 .hero__container {
-    min-height: 728px;
     display: flex;
     justify-content: space-between;
+
+    min-height: 728px;
+    
     padding-top: clamp(3.75rem, 3.125rem + 3.125vw, 5.625rem);
 }
 
@@ -16,12 +18,14 @@
    ========================================================================== */
 
 .hero__content {
-    margin-top: 10.1875rem;
     display: flex;
     align-items: flex-start;
     flex-direction: column;
     gap: 2.625rem;
+    
     max-width: min(100%, 28.75rem);
+
+    margin-top: 10.1875rem;
 }
 
 .hero__title {

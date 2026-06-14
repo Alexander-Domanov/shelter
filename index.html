@@ -29,7 +29,7 @@
         </div>
 
         <nav class="header__nav">
-            <a href="#about">About the shelter</a>
+            <a href="#about" aria-current="page">About the shelter</a>
             <a href="pets.html">Our pets</a>
             <a href="#help">Help the shelter</a>
             <a href="#contacts">Contacts</a>
@@ -141,7 +141,7 @@
             </picture>
 
             <div class="about__content">
-                <h3 class="about__title">About the shelter
+                <h3>About the shelter
                     “Cozy House”</h3>
                 <p class="about__text">Currently we have 121 dogs and 342 cats on our hands and statistics show that
                     only 20% of them will find
@@ -160,7 +160,50 @@
     <!-- ======== ABOUT CONTENT START ======== -->
 
     <!-- ======== PETS CONTENT START ======== -->
-    <section class="pets"></section>
+    <section class="pets">
+        <div class="pets__container container">
+            <h3 class="pets__title">Our friends who <br> are looking for a house</h3>
+            
+            <div class="pets__content">
+                <button class="arrow-btn">
+                    <svg class="icon" aria-hidden="true" width="14" height="6">
+                        <use href="./assets/icons/sprite.svg#arrow"></use>
+                    </svg>
+                </button>
+                
+                <div class="pets__grid">
+                    <article class="pet-card">
+                        <img src="./assets/images/pets/pets-katrine.png" alt="" width="270" height="270" loading="lazy"
+                             decoding="async">
+                        <p class="pet-card__name">Katrine</p>
+                        <button class="pet-card__button" type="button">Learn more</button>
+                    </article>
+
+                    <article class="pet-card">
+                        <img src="./assets/images/pets/pets-jennifer.png" alt="" width="270" height="270" loading="lazy"
+                             decoding="async">
+                        <p class="pet-card__name">Jennifer</p>
+                        <button class="pet-card__button" type="button">Learn more</button>
+                    </article>
+
+                    <article class="pet-card">
+                        <img src="./assets/images/pets/pets-woody.png" alt="" width="270" height="270" loading="lazy"
+                             decoding="async">
+                        <p class="pet-card__name">Woody</p>
+                        <button class="pet-card__button" type="button">Learn more</button>
+                    </article>
+                </div>
+
+                <button class="arrow-btn">
+                    <svg class="icon icon--arrow-right" width="14" height="6">
+                        <use href="./assets/icons/sprite.svg#arrow"></use>
+                    </svg>
+                </button>
+            </div>
+            
+            <a href="pets.html" class="pets__button">Get to know the rest</a>
+        </div>
+    </section>
     <!-- ======== PETS CONTENT END ======== -->
 
     <!-- ======== HELP CONTENT START ======== -->
@@ -176,6 +219,5 @@
 <!-- ======== FOOTER START ======== -->
 <footer id="contacts" class="footer"></footer>
 <!-- ======== FOOTER END ======== -->
-
 </body>
 </html>

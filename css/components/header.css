@@ -9,6 +9,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    
     padding-top: clamp(1.875rem, 1.875rem + 0vw, 1.875rem);
 }
 
@@ -17,10 +18,11 @@
    ========================================================================== */
 
 .header__subtitle {
-    margin-top: 9px;
-    text-align: center;
+    margin-top: 10px;
     
     font-size: 0.8125rem;
+    text-align: center;
+    line-height: 1;
     letter-spacing: 0.1em;
     color: var(--color-light-xl);
 }
@@ -50,4 +52,12 @@
     border-bottom-color: var(--color-primary);
     
     color: var(--color-light-s);
+}
+
+.header__nav a[aria-current="page"] {
+    border-bottom-color: var(--color-primary);
+    color: var(--color-light-s);
+
+    cursor: default;
+    pointer-events: none;
 }

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+<defs>
+    <!-- Arrow left/right -->
+    <symbol id="arrow" viewBox="0 0 14 6">
+        <path d="M14 2V4H3V6L0 3L3 0V2H14Z" fill="currentColor"/>
+    </symbol>
+</defs>
+</svg>

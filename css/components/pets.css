@@ -1,0 +1,57 @@
+@import url('../base/variables.css');
+
+.pets {
+    background: var(--color-background-gray) ;
+}
+
+.pets__container {
+    display: flex;
+    flex-direction: column;
+    gap: 3.75rem;
+    align-items: center;
+
+    padding-top: var(--padding-section-top);
+    padding-bottom: var(--padding-section-bottom);
+}
+
+.pets__title {
+    max-width: 28rem;
+    
+    margin: 0 auto;
+    
+    text-align: center;
+}
+
+.pets__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 53px;
+}
+
+.pets__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5.625rem;
+}
+
+.pet-card {
+    max-width: 270px;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.875rem;
+    
+    background-color: var(--color-light-s);
+    padding-bottom: 1.875rem;
+}
+
+.pet-card__name {
+    color: var(--color-dark-l);
+}
+
+.pet-card img {
+    aspect-ratio: 270/270;
+}
+
