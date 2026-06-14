@@ -3,17 +3,14 @@
 /* ==========================================================================
    DONATION
    ========================================================================== */
-@import url('../base/variables.css');
-
-/* ==========================================================================
-   DONATION
-   ========================================================================== */
 
 .donation {
     padding-top: var(--padding-section-top);
     padding-bottom: var(--padding-section-bottom);
-    background: var(--color-background-gray);
+
     max-height: 462px;
+    
+    background: var(--color-background-gray);
 }
 
 .donation__container {
@@ -23,10 +20,9 @@
     gap: 1.875rem;
 }
 
-
 .donation__image {
     flex-shrink: 0;
-    width: 505px;
+    width: 31.5625rem;
 }
 
 .donation__image img {
@@ -59,17 +55,19 @@
     color: var(--color-dark-l);
     line-height: 1.1;
     letter-spacing: 0.06em;
-    margin: 0;
 }
 
 .donation__card {
+    padding: 0.625rem 0.9375rem;
+    max-height: 43px;
+    
     display: inline-flex;
     align-items: center;
-    max-height: 43px;
     gap: 0.9375rem;
+    
     background-color: var(--color-primary);
     border-radius: 9px;
-    padding: 0.625rem 0.9375rem;
+
     align-self: flex-start;
 }
 
@@ -82,14 +80,16 @@
     font-family: var(--font-family-serif);
     font-size: 1.25rem;
     letter-spacing: 0.05em;
+    
     color: var(--color-dark-3xl);
 }
 
 .donation__legal {
+    max-width: 65ch;
+    
     font-family: var(--font-family-sans);
     font-size: 0.75rem;
     line-height: 1.125rem;
     letter-spacing: 0;
     color: var(--color-dark-m);
-    max-width: 65ch;
 }
