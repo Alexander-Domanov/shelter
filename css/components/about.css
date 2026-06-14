@@ -1,0 +1,30 @@
+@import url('../base/variables.css');
+
+/* ==========================================================================
+   About Container
+   ========================================================================== */
+.about {
+    padding-top: var(--padding-section-top);
+    padding-bottom: var(--padding-section-bottom);
+}
+
+.about__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7.20rem;
+}
+
+.about__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 25px;
+    max-width: 430px;
+}
+
+.about__text {
+    color: var(--color-dark-l);
+    font-size: 0.9375rem;
+    line-height: 1.6;
+}

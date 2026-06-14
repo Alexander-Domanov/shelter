@@ -1,0 +1,21 @@
+@import url('../base/variables.css');
+
+/* ==========================================================================
+   ICON
+   ========================================================================== */
+
+
+.icon {
+    color: var(--color-dark-3xl);
+    stroke: none;
+    width: 14px;
+    height: 6px;
+}
+
+.icon--arrow-left {
+    transform: rotate(90deg);
+}
+
+.icon--arrow-right {
+    transform: rotate(-180deg);
+}
