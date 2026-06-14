@@ -165,7 +165,7 @@
             <h3 class="pets__title">Our friends who <br> are looking for a house</h3>
             
             <div class="pets__content">
-                <button class="arrow-btn">
+                <button class="arrow-btn" aria-label="Prev slide">
                     <svg class="icon" aria-hidden="true" width="14" height="6">
                         <use href="./assets/icons/sprite.svg#arrow"></use>
                     </svg>
@@ -194,8 +194,8 @@
                     </article>
                 </div>
 
-                <button class="arrow-btn">
-                    <svg class="icon icon--arrow-right" width="14" height="6">
+                <button class="arrow-btn" aria-label="Next slide">
+                    <svg class="icon icon--arrow-right" width="14" height="6" aria-hidden="true">
                         <use href="./assets/icons/sprite.svg#arrow"></use>
                     </svg>
                 </button>
@@ -207,7 +207,77 @@
     <!-- ======== PETS CONTENT END ======== -->
 
     <!-- ======== HELP CONTENT START ======== -->
-    <section id="help" class="help"></section>
+    <section id="help" class="help">
+        <div class="help__container container">
+            <h3 class="help__title">How you can help <br>
+                our shelter</h3>
+            <div class="help__grid">
+                <!-- ======== FIRST ROW START ======== -->
+                <div class="help__row">
+                    <div class="help__item">
+                        <svg class="icon" aria-hidden="true" width="60" height="60">
+                            <use href="./assets/icons/sprite.svg#petFood"></use>
+                        </svg>
+                        <h4 class="help__item-text">Pet food</h4>
+                    </div>
+                    <div class="help__item">
+                        <svg class="icon" aria-hidden="true" width="60" height="60">
+                            <use href="./assets/icons/sprite.svg#transportation"></use>
+                        </svg>
+                        <h4 class="help__item-text">Transportation</h4>
+                    </div>
+                    <div class="help__item">
+                        <svg class="icon" aria-hidden="true" width="60" height="60">
+                            <use href="./assets/icons/sprite.svg#toys"></use>
+                        </svg>
+                        <h4 class="help__item-text">Toys</h4>
+                    </div>
+                    <div class="help__item">
+                        <svg class="icon" aria-hidden="true" width="60" height="60">
+                            <use href="./assets/icons/sprite.svg#bowlsCups"></use>
+                        </svg>
+                        <h4 class="help__item-text">Bowls and cups</h4>
+                    </div>
+                    <div class="help__item">
+                        <svg class="icon" aria-hidden="true" width="60" height="60">
+                            <use href="./assets/icons/sprite.svg#shampoos"></use>
+                        </svg>
+                        <h4 class="help__item-text">Shampoos</h4>
+                    </div>
+                </div>
+                <!-- ======== FIRST ROW END ======== -->
+
+                <!-- ======== SECOND ROW START ======== -->
+                <div class="help__row help__row--center">
+                    <div class="help__item">
+                        <svg class="icon" aria-hidden="true" width="60" height="60">
+                            <use href="./assets/icons/sprite.svg#vitamins"></use>
+                        </svg>
+                        <h4 class="help__item-text">Vitamins</h4>
+                    </div>
+                    <div class="help__item">
+                        <svg class="icon" aria-hidden="true" width="60" height="60">
+                            <use href="./assets/icons/sprite.svg#medicines"></use>
+                        </svg>
+                        <h4 class="help__item-text">Medicines</h4>
+                    </div>
+                    <div class="help__item">
+                        <svg class="icon" aria-hidden="true" width="60" height="60">
+                            <use href="./assets/icons/sprite.svg#collarsLeashes"></use>
+                        </svg>
+                        <h4 class="help__item-text">Collars / leashes</h4>
+                    </div>
+                    <div class="help__item">
+                        <svg class="icon" aria-hidden="true" width="60" height="60">
+                            <use href="./assets/icons/sprite.svg#sleepingArea"></use>
+                        </svg>
+                        <h4 class="help__item-text">Sleeping areas</h4>
+                    </div>
+                </div>
+                <!-- ======== SECOND ROW END ======== -->
+            </div>
+        </div>
+    </section>
     <!-- ======== HELP CONTENT END ======== -->
 
     <!-- ======== DONATION CONTENT START ======== -->

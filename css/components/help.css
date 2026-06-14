@@ -1,0 +1,68 @@
+@import url('../base/variables.css');
+
+/* ==========================================================================
+   HELP CONTAINER
+   ========================================================================== */
+
+.help {
+    padding-top: var(--padding-section-top);
+    padding-bottom: var(--padding-section-bottom);
+}
+
+.help__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3.75rem;
+    background-color: var(--color-light-xl);
+}
+
+
+.help__title {
+    max-width: 28rem;
+
+    margin: 0 auto;
+
+    text-align: center;
+}
+
+.help__grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 3.4375rem;
+}
+
+.help__row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 7.5rem;
+    row-gap: 1.875rem;
+}
+
+.help__row--center {
+    justify-content: center;
+}
+
+.help__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.875rem;
+}
+
+.help__item svg {
+    width: 60px;
+    height: 60px;
+    flex-shrink: 0;
+}
+
+.help__item-text {
+    text-align: center;
+    white-space: nowrap;
+    color: var(--color-dark-l);
+    font-size: 1.25rem;
+    letter-spacing: 0.06em;
+    line-height: 1.15;
+}
