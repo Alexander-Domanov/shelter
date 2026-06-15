@@ -7,8 +7,6 @@
 .icon {
     color: var(--color-dark-3xl);
     stroke: none;
-    width: 14px;
-    height: 6px;
 }
 
 .icon--arrow-left {

@@ -7,8 +7,200 @@
     <meta name="description" content="Browse our pets available for adoption at the animal shelter. Meet our dogs, cats, and other animals searching for their forever home.">
     <link rel="stylesheet" href="./css/styles.css">
     <script src="./js/main.js" defer></script>
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" href="./assets/favicon/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/svg+xml" href="./assets/favicon/favicon.svg">
+    <link rel="shortcut icon" href="./assets/favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png">
+    <meta name="apple-mobile-web-app-title" content="Shelter">
+    <!--    <link rel="manifest" href="./assets/favicon/site.webmanifest">-->
+    <!--    -->
 </head>
 <body>
 
+<!-- ======== HEADER BEGIN ======== -->
+<header class="header header--light">
+    <div class="header__container header--padding container ">
+        <div>
+            <a href="./">
+                <h1 class="header__title">Cozy House</h1>
+                <p class="header__subtitle">Shelter for pets in Boston</p>
+            </a>
+        </div>
+
+        <nav class="header__nav">
+            <a href="./index.html#about">About the shelter</a>
+            <a href="pets.html" aria-current="page">Our pets</a>
+            <a href="./index.html#help">Help the shelter</a>
+            <a href="./index.html#contacts">Contacts</a>
+        </nav>
+    </div>
+</header>
+<!-- ======== HEADER END ======== -->
+
+<main>
+    <!-- ======== PETS CONTENT START ======== -->
+    <section class="pets">
+        <div class="pets__container container">
+            <h3 class="pets__title">Our friends who <br> are looking for a house</h3>
+
+            <div class="pets__content">
+                <div class="pets__grid pets__grid--4cols">
+                    <article class="pet-card">
+                        <img src="./assets/images/pets/pets-katrine.png" alt="" width="270" height="270" loading="lazy"
+                             decoding="async">
+                        <h2 class="pet-card__name">Katrine</h2>
+                        <button class="pet-card__button" type="button">Learn more</button>
+                    </article>
+
+                    <article class="pet-card">
+                        <img src="./assets/images/pets/pets-jennifer.png" alt="" width="270" height="270" loading="lazy"
+                             decoding="async">
+                        <h2 class="pet-card__name">Jennifer</h2>
+                        <button class="pet-card__button" type="button">Learn more</button>
+                    </article>
+
+                    <article class="pet-card">
+                        <img src="./assets/images/pets/pets-woody.png" alt="" width="270" height="270" loading="lazy"
+                             decoding="async">
+                        <h2 class="pet-card__name">Woody</h2>
+                        <button class="pet-card__button" type="button">Learn more</button>
+                    </article>
+
+                    <article class="pet-card">
+                        <img src="./assets/images/pets/dogs-katrine.png" alt="" width="270" height="270" loading="lazy"
+                             decoding="async">
+                        <h2 class="pet-card__name">Sophia</h2>
+                        <button class="pet-card__button" type="button">Learn more</button>
+                    </article>
+
+                    <article class="pet-card">
+                        <img src="./assets/images/pets/pets-timmy.png" alt="" width="270" height="270" loading="lazy"
+                             decoding="async">
+                        <h2 class="pet-card__name">Timmy</h2>
+                        <button class="pet-card__button" type="button">Learn more</button>
+                    </article>
+
+                    <article class="pet-card">
+                        <img src="./assets/images/pets/pets-charly.png" alt="" width="270" height="270" loading="lazy"
+                             decoding="async">
+                        <h2 class="pet-card__name">Charly</h2>
+                        <button class="pet-card__button" type="button">Learn more</button>
+                    </article>
+
+                    <article class="pet-card">
+                        <img src="./assets/images/pets/pets-scarlet.png" alt="" width="270" height="270" loading="lazy"
+                             decoding="async">
+                        <h2 class="pet-card__name">Scarlet</h2>
+                        <button class="pet-card__button" type="button">Learn more</button>
+                    </article>
+
+                    <article class="pet-card">
+                        <img src="./assets/images/pets/cats-katrine.png" alt="" width="270" height="270" loading="lazy"
+                             decoding="async">
+                        <h2 class="pet-card__name">Freddie</h2>
+                        <button class="pet-card__button" type="button">Learn more</button>
+                    </article>
+                </div>
+            </div>
+
+            <div class="pets__pagination">
+                <!-- button pagination left -->
+                <button class="arrow-btn" type="button" disabled>
+                    <svg class="icon" width="10" height="11" aria-hidden="true">
+                        <use href="./assets/icons/sprite.svg#arrow2"></use>
+                    </svg>
+                    <svg class="icon" width="10" height="11" aria-hidden="true">
+                        <use href="./assets/icons/sprite.svg#arrow2"></use>
+                    </svg>
+                </button>
+                
+                <button class="arrow-btn" type="button" disabled>
+                    <svg class="icon" width="10" height="11" aria-hidden="true">
+                        <use href="./assets/icons/sprite.svg#arrow2"></use>
+                    </svg>
+                </button>
+
+                <!-- button pagination number -->
+                <button class="arrow-btn pets__pagination--text" type="button">1</button>
+
+                <!-- button pagination right -->
+                <button class="arrow-btn" type="button">
+                    <svg class="icon icon--arrow-right" width="10" height="11" aria-hidden="true">
+                        <use href="./assets/icons/sprite.svg#arrow2"></use>
+                    </svg>
+                </button>
+
+                <button class="arrow-btn" type="button">
+                    <svg class="icon icon--arrow-right" width="10" height="11" aria-hidden="true">
+                        <use href="./assets/icons/sprite.svg#arrow2"></use>
+                    </svg>
+                    <svg class="icon icon--arrow-right" width="10" height="11" aria-hidden="true">
+                        <use href="./assets/icons/sprite.svg#arrow2"></use>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </section>
+    <!-- ======== PETS CONTENT END ======== -->
+</main>
+
+<!-- ======== FOOTER START ======== -->
+<footer id="contacts" class="footer gradient--footer">
+    <div class="footer__container container">
+        <!-- COLUMN 1: QUESTION AND OFFERS START -->
+        <div class="footer__column">
+            <h3 class="footer__title">For questions <br> and suggestions</h3>
+            <ul class="footer__contact-list">
+                <li class="footer__contact-item">
+                    <svg class="footer__icon" width="40" height="32" aria-hidden="true" focusable="false">
+                        <use href="./assets/icons/sprite.svg#email"></use>
+                    </svg>
+                    <a href="mailto:email@shelter.com" class="footer__link">email@shelter.com</a>
+                </li>
+                <li class="footer__contact-item">
+                    <svg class="footer__icon" width="40" height="32" aria-hidden="true" focusable="false">
+                        <use href="./assets/icons/sprite.svg#phone"></use>
+                    </svg>
+                    <a href="tel:+136745677554" class="footer__link">+13 674 567 75 54</a>
+                </li>
+            </ul>
+        </div>
+        <!-- COLUMN 1: QUESTION AND OFFERS END -->
+
+        <!-- COLUMN 2: ADDRESS START -->
+        <div class="footer__column">
+            <h3 class="footer__title">We are waiting <br> for your visit</h3>
+            <ul class="footer__contact-list">
+                <li class="footer__contact-item">
+                    <svg class="footer__icon" width="22" height="32" aria-hidden="true" focusable="false">
+                        <use href="./assets/icons/sprite.svg#pin"></use>
+                    </svg>
+                    <address class="footer__address">1 Central Street, Boston <br> (entrance from the store)</address>
+                </li>
+                <li class="footer__contact-item">
+                    <svg class="footer__icon" width="22" height="32" aria-hidden="true" focusable="false">
+                        <use href="./assets/icons/sprite.svg#pin"></use>
+                    </svg>
+                    <address class="footer__address">18 South Park, London</address>
+                </li>
+            </ul>
+        </div>
+        <!-- COLUMN 2: ADDRESS END -->
+
+        <!-- COLUMN 3: IMAGE START -->
+        <div class="footer__image">
+            <img src="./assets/images/footer/footer-puppy.png"
+                 alt="A cute puppy"
+                 width="300"
+                 height="310"
+                 loading="lazy"
+                 decoding="async">
+        </div>
+        <!-- COLUMN 3: IMAGE END -->
+    </div>
+</footer>
+<!-- ======== FOOTER END ======== -->
 </body>
 </html>

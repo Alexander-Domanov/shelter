@@ -4,7 +4,6 @@
    PETS CONTAINER
    ========================================================================== */
 
-
 .pets {
     background: var(--color-background-gray) ;
 }
@@ -60,3 +59,28 @@
     aspect-ratio: 270/270;
 }
 
+/* ==========================================================================
+   PETS PAGE
+   ========================================================================== */
+
+/* Modifier for pets page – 4 columns */
+.pets__grid--4cols {
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 1.875rem;
+    column-gap: 2.5rem;
+}
+
+.pets__pagination {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.pets__pagination--text {
+    font-family: var(--font-family-serif);
+    font-size: 1.25rem;
+    line-height: 1.14;
+    letter-spacing: 0.06em;
+    text-align: center;
+    color: var(--color-dark-3xl);
+}
