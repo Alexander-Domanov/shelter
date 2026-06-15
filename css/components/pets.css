@@ -26,6 +26,10 @@
     text-align: center;
 }
 
+.pets__title--dark {
+    color: var(--color-dark-l);
+}
+
 .pets__content {
     display: flex;
     justify-content: space-between;
