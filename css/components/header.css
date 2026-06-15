@@ -2,29 +2,58 @@
 @import url('gradient.css');
 
 /* ==========================================================================
-   Header Container
+   Header Block
    ========================================================================== */
 
 .header__container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
     padding-top: clamp(1.875rem, 1.875rem + 0vw, 1.875rem);
 }
 
+.header--padding {
+    padding-bottom: clamp(1.875rem, 1.875rem + 0vw, 1.875rem);
+}
+
 /* ==========================================================================
-   Logo & Subtitle
+   Logo & Subtitle (Elements)
    ========================================================================== */
+
+.header__title {
+    font-family: var(--font-family-serif);
+    font-size: 2rem;
+    line-height: 1.1;
+    letter-spacing: 0.06em;
+    margin: 0;
+}
 
 .header__subtitle {
     margin-top: 10px;
-    
     font-size: 0.8125rem;
-    text-align: center;
     line-height: 1;
     letter-spacing: 0.1em;
-    color: var(--color-light-xl);
+    text-align: center;
+}
+
+/* ==========================================================================
+   Modifier: Light background (pets page)
+   ========================================================================== */
+
+.header--light .header__title,
+.header--light .header__subtitle {
+    color: var(--color-dark-l);
+}
+.header--light .header__nav a[aria-current="page"] {
+    color: var(--color-dark-l);    /* dark */
+}
+
+.header--light .header__nav a {
+    color: var(--color-dark-l);    /* #545454 (dark grey) */
+}
+.header--light .header__nav a:hover {
+    color: var(--color-dark-3xl);   /* almost black */
+    border-bottom-color: var(--color-primary);
 }
 
 /* ==========================================================================
@@ -33,31 +62,23 @@
 
 .header__nav {
     display: flex;
-    justify-content: space-between;
     gap: 2.1875rem;
 }
 
-
-/* Navigation Links */
 .header__nav a {
     border-bottom: 3px solid transparent;
-    
     color: var(--color-dark-s);
-    
-    transition: border-color 0.3s ease;
+    transition: border-color 0.3s ease, color 0.3s ease;
 }
 
-/* Hover state */
 .header__nav a:hover {
     border-bottom-color: var(--color-primary);
-    
     color: var(--color-light-s);
 }
 
 .header__nav a[aria-current="page"] {
     border-bottom-color: var(--color-primary);
     color: var(--color-light-s);
-
     cursor: default;
     pointer-events: none;
 }
