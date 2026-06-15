@@ -33,6 +33,17 @@
     gap: 53px;
 }
 
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    clip: rect(0, 0, 0, 0);
+    overflow: hidden;
+}
+
 .pets__grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
