@@ -46,7 +46,7 @@
             <div class="hero__content">
                 <h2 class="hero__title">Not only people need a house</h2>
                 <p class="hero__subtitle">We offer to give a chance to a little and nice puppy with an extremely wide and open heart. He or she will love you more than anybody else in the world, you will see!</p>
-                <a class="hero__button">Make a friend</a>
+                <a href="#pets" class="hero__button">Make a friend</a>
             </div>
             
             <div class="hero__img">
@@ -160,36 +160,58 @@
     <!-- ======== ABOUT CONTENT START ======== -->
 
     <!-- ======== PETS CONTENT START ======== -->
-    <section class="pets">
+    <section id="pets" class="pets">
         <div class="pets__container container">
             <h3 class="pets__title">Our friends who <br> are looking for a house</h3>
-            
+
+            <!-- PETS CARD START-->
             <div class="pets__content">
                 <button class="arrow-btn" aria-label="Prev slide">
                     <svg class="icon" aria-hidden="true" width="14" height="6">
                         <use href="./assets/icons/sprite.svg#arrow"></use>
                     </svg>
                 </button>
-                
+
                 <div class="pets__grid">
                     <article class="pet-card">
-                        <img src="./assets/images/pets/pets-katrine.png" alt="" width="270" height="270" loading="lazy"
-                             decoding="async">
-                        <h2 class="pet-card__name">Katrine</h2>
+                        <figure class="pet-card__figure">
+                            <img src="./assets/images/pets/pets-katrine.png"
+                                 alt="Katrine - a graceful British Shorthair cat"
+                                 width="270"
+                                 height="270"
+                                 loading="lazy"
+                                 decoding="async"
+                                 class="pet-card__image">
+                            <figcaption class="pet-card__name">Katrine</figcaption>
+                        </figure>
                         <button class="pet-card__button" type="button">Learn more</button>
                     </article>
 
                     <article class="pet-card">
-                        <img src="./assets/images/pets/pets-jennifer.png" alt="" width="270" height="270" loading="lazy"
-                             decoding="async">
-                        <h2 class="pet-card__name">Jennifer</h2>
+                        <figure class="pet-card__figure">
+                            <img src="./assets/images/pets/pets-jennifer.png"
+                                 alt="Jennifer - a cheerful and energetic dog"
+                                 width="270"
+                                 height="270"
+                                 loading="lazy"
+                                 decoding="async"
+                                 class="pet-card__image">
+                            <figcaption class="pet-card__name">Jennifer</figcaption>
+                        </figure>
                         <button class="pet-card__button" type="button">Learn more</button>
                     </article>
 
                     <article class="pet-card">
-                        <img src="./assets/images/pets/pets-woody.png" alt="" width="270" height="270" loading="lazy"
-                             decoding="async">
-                        <h2 class="pet-card__name">Woody</h2>
+                        <figure class="pet-card__figure">
+                            <img src="./assets/images/pets/pets-woody.png"
+                                 alt="Woody - a friendly and loyal dog"
+                                 width="270"
+                                 height="270"
+                                 loading="lazy"
+                                 decoding="async"
+                                 class="pet-card__image">
+                            <figcaption class="pet-card__name">Woody</figcaption>
+                        </figure>
                         <button class="pet-card__button" type="button">Learn more</button>
                     </article>
                 </div>
@@ -200,6 +222,7 @@
                     </svg>
                 </button>
             </div>
+            <!-- PETS CARD END-->
             
             <a href="pets.html" class="pets__button">Get to know the rest</a>
         </div>
@@ -212,7 +235,7 @@
             <h3 class="help__title">How you can help <br>
                 our shelter</h3>
             <div class="help__grid">
-                <!-- ======== FIRST ROW START ======== -->
+                <!-- FIRST ROW START-->
                 <div class="help__row">
                     <div class="help__item">
                         <svg class="icon" aria-hidden="true" width="60" height="60">
@@ -245,9 +268,9 @@
                         <h4 class="help__item-text">Shampoos</h4>
                     </div>
                 </div>
-                <!-- ======== FIRST ROW END ======== -->
+                <!-- FIRST ROW END START-->
 
-                <!-- ======== SECOND ROW START ======== -->
+                <!-- SECOND ROW START -->
                 <div class="help__row help__row--center">
                     <div class="help__item">
                         <svg class="icon" aria-hidden="true" width="60" height="60">
@@ -274,7 +297,7 @@
                         <h4 class="help__item-text">Sleeping areas</h4>
                     </div>
                 </div>
-                <!-- ======== SECOND ROW END ======== -->
+                <!-- SECOND ROW END  -->
             </div>
         </div>
     </section>
@@ -297,12 +320,12 @@
 
                 <p class="donation__bank">Name of the bank / Type of bank account</p>
 
-                <div class="donation__card">
+                <a href="#" class="donation__card">
                     <svg class="donation__icon" width="30" height="23" aria-hidden="true">
                         <use href="./assets/icons/sprite.svg#creditCard"></use>
                     </svg>
                     <span class="donation__number">8380 2880 8028 8791 7435</span>
-                </div>
+                </a>
 
                 <p class="donation__legal">
                     Legal information and lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -348,13 +371,23 @@
                     <svg class="footer__icon" width="22" height="32" aria-hidden="true" focusable="false">
                         <use href="./assets/icons/sprite.svg#pin"></use>
                     </svg>
-                    <address class="footer__address">1 Central Street, Boston <br> (entrance from the store)</address>
+                    <address class="footer__address">
+                        <a href="https://maps.google.com/?q=1+Central+Street+Boston" target="_blank"
+                           rel="noopener noreferrer">
+                            1 Central Street, Boston <br> (entrance from the store)
+                        </a>
+                    </address>
                 </li>
                 <li class="footer__contact-item">
                     <svg class="footer__icon" width="22" height="32" aria-hidden="true" focusable="false">
                         <use href="./assets/icons/sprite.svg#pin"></use>
                     </svg>
-                    <address class="footer__address">18 South Park, London</address>
+                    <address class="footer__address">
+                        <a href="https://maps.google.com/?q=18+South+Park+London" target="_blank"
+                           rel="noopener noreferrer">
+                            18 South Park, London
+                        </a>
+                    </address>
                 </li>
             </ul>
         </div>

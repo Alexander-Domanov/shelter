@@ -64,8 +64,8 @@
        FOOTER
        ========================================================================== */
     
-    --footer-col1-title-margin: 40px;   /* отступ под заголовком (левая колонка) */
-    --footer-col2-title-margin: 34px;   /* отступ под заголовком (правая колонка) */
-    --footer-list-gap: 40px;            /* отступ между строками списка (левая колонка) */
-    --footer-list-gap-col2: 32px;       /* отступ между строками списка (правая колонка) */
+    --footer-col1-title-margin: 2.5rem;
+    --footer-col2-title-margin: 2.125rem;
+    --footer-list-gap: 2.5rem;
+    --footer-list-gap-col2: 2rem;
 }

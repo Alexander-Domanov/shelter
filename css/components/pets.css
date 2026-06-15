@@ -49,10 +49,31 @@
     
     background-color: var(--color-light-s);
     padding-bottom: 1.875rem;
+
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.pet-card:hover {
+    background-color: var(--color-light-xl);
+    box-shadow: 0 0.625rem 1.25rem rgba(0, 0, 0, 0.1);
+}
+
+.pet-card__figure {
+    display: flex;
+    flex-direction: column;
+    gap: 1.875rem;
 }
 
 .pet-card__name {
+    font-family: var(--font-family-serif);
+    font-size: 1.25rem;
+    letter-spacing: 0.06em;
+    text-align: center;
+    line-height: 1;
     color: var(--color-dark-l);
+
+    transition: color 0.3s ease;
 }
 
 .pet-card img {
