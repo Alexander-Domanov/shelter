@@ -18,9 +18,11 @@
 </head>
 <body>
 
-<!-- ======== HEADER BEGIN ======== -->
+<!-- ======== HEADER BEGIN ======== -->q
 <header class="header header--light">
-    <div class="header__container header--padding container ">
+    
+    <!-- Logo-->
+    <div class="header__container header--padding">
         <div>
             <a href="./">
                 <h1 class="header__title">Cozy House</h1>
@@ -28,6 +30,17 @@
             </a>
         </div>
 
+        <!-- Burger menu -->
+        <button class="hamburger"
+                aria-label="Toggle navigation menu"
+                aria-expanded="false"
+                aria-controls="primary-navigation">
+            <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+             </span>
+        </button>
+
+        <!-- Navigation-->
         <nav class="header__nav">
             <a href="./index.html#about">About the shelter</a>
             <a href="pets.html" aria-current="page">Our pets</a>

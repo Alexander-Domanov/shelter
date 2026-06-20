@@ -44,6 +44,7 @@
        Spacing (Fluid)
        ========================================================================== */
     --padding-container: clamp(0.625rem, 0rem + 3.125vw, 2.5rem);
+    --padding-header-container: clamp(1.25rem, 0rem + 3.125vw, 2.5rem);
     --padding-section-top: clamp(2.625rem, 1.8333rem + 3.9583vw, 5rem);
     --padding-section-bottom: clamp(2.625rem, 1.4167rem + 6.0417vw, 6.25rem);
 

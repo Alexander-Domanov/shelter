@@ -20,7 +20,7 @@
 <body>
 <!-- ======== HEADER BEGIN ======== -->
 <header class="header gradient--primary ">
-    <div class="header__container container ">
+    <div class="header__container">
         <div>
             <a href="./">
                 <h1 class="header__title">Cozy House</h1>
@@ -28,6 +28,17 @@
             </a>
         </div>
 
+        <!-- Burger menu -->
+        <button class="hamburger"
+                aria-label="Toggle navigation menu"
+                aria-expanded="false"
+                aria-controls="primary-navigation">
+            <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+             </span>
+        </button>
+
+        <!-- Navigation-->
         <nav class="header__nav">
             <a href="#about" aria-current="page">About the shelter</a>
             <a href="pets.html">Our pets</a>
@@ -39,375 +50,375 @@
 <!-- ======== HEADER END ======== -->
 
 <!-- ======== MAIN CONTENT BEGIN ======== -->
-<main>
-    <!-- ======== HERO CONTENT START ======== -->
-    <section class="hero gradient--primary">
-        <div class="hero__container container ">
-            <div class="hero__content">
-                <h2 class="hero__title">Not only people need a house</h2>
-                <p class="hero__subtitle">We offer to give a chance to a little and nice puppy with an extremely wide and open heart. He or she will love you more than anybody else in the world, you will see!</p>
-                <a href="#pets" class="hero__button">Make a friend</a>
-            </div>
-            
-            <div class="hero__img">
-                <picture>
-                   <source
-                            type="image/avif"
-                            srcset="
-                ./assets/images/hero/start-screen-puppy-320.avif   320w,
-                ./assets/images/hero/start-screen-puppy-640.avif   640w,
-                ./assets/images/hero/start-screen-puppy-800.avif   800w,
-                ./assets/images/hero/start-screen-puppy-1200.avif 1200w,
-                ./assets/images/hero/start-screen-puppy-1600.avif 1600w,
-                ./assets/images/hero/start-screen-puppy-2000.avif 2000w
-            "
-                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 698px"
-                    >
-                    
-                    <source
-                            type="image/webp"
-                            srcset="
-                ./assets/images/hero/start-screen-puppy-320.webp   320w,
-                ./assets/images/hero/start-screen-puppy-640.webp   640w,
-                ./assets/images/hero/start-screen-puppy-800.webp   800w,
-                ./assets/images/hero/start-screen-puppy-1200.webp 1200w,
-                ./assets/images/hero/start-screen-puppy-1600.webp 1600w,
-                ./assets/images/hero/start-screen-puppy-2000.webp 2000w
-            "
-                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 698px"
-                    >
-                    
-                    <img
-                            src="./assets/images/hero/start-screen-puppy-1200.jpg"
-                            srcset="
-                ./assets/images/hero/start-screen-puppy-320.jpg   320w,
-                ./assets/images/hero/start-screen-puppy-640.jpg   640w,
-                ./assets/images/hero/start-screen-puppy-800.jpg   800w,
-                ./assets/images/hero/start-screen-puppy-1200.jpg 1200w
-            "
-                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 698px"
-                            alt=""
-                            width="698"
-                            height="728"
-                            loading="eager"
-                            fetchpriority="high"
-                            decoding="async"
-                    > 
-                </picture>
-            </div>
-        </div>
-    </section>
-    <!-- ======== HERO CONTENT END ======== -->
+<!--<main>-->
+<!--    &lt;!&ndash; ======== HERO CONTENT START ======== &ndash;&gt;-->
+<!--    <section class="hero gradient&#45;&#45;primary">-->
+<!--        <div class="hero__container container ">-->
+<!--            <div class="hero__content">-->
+<!--                <h2 class="hero__title">Not only people need a house</h2>-->
+<!--                <p class="hero__subtitle">We offer to give a chance to a little and nice puppy with an extremely wide and open heart. He or she will love you more than anybody else in the world, you will see!</p>-->
+<!--                <a href="#pets" class="hero__button">Make a friend</a>-->
+<!--            </div>-->
+<!--            -->
+<!--            <div class="hero__img">-->
+<!--                <picture>-->
+<!--                   <source-->
+<!--                            type="image/avif"-->
+<!--                            srcset="-->
+<!--                ./assets/images/hero/start-screen-puppy-320.avif   320w,-->
+<!--                ./assets/images/hero/start-screen-puppy-640.avif   640w,-->
+<!--                ./assets/images/hero/start-screen-puppy-800.avif   800w,-->
+<!--                ./assets/images/hero/start-screen-puppy-1200.avif 1200w,-->
+<!--                ./assets/images/hero/start-screen-puppy-1600.avif 1600w,-->
+<!--                ./assets/images/hero/start-screen-puppy-2000.avif 2000w-->
+<!--            "-->
+<!--                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 698px"-->
+<!--                    >-->
+<!--                    -->
+<!--                    <source-->
+<!--                            type="image/webp"-->
+<!--                            srcset="-->
+<!--                ./assets/images/hero/start-screen-puppy-320.webp   320w,-->
+<!--                ./assets/images/hero/start-screen-puppy-640.webp   640w,-->
+<!--                ./assets/images/hero/start-screen-puppy-800.webp   800w,-->
+<!--                ./assets/images/hero/start-screen-puppy-1200.webp 1200w,-->
+<!--                ./assets/images/hero/start-screen-puppy-1600.webp 1600w,-->
+<!--                ./assets/images/hero/start-screen-puppy-2000.webp 2000w-->
+<!--            "-->
+<!--                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 698px"-->
+<!--                    >-->
+<!--                    -->
+<!--                    <img-->
+<!--                            src="./assets/images/hero/start-screen-puppy-1200.jpg"-->
+<!--                            srcset="-->
+<!--                ./assets/images/hero/start-screen-puppy-320.jpg   320w,-->
+<!--                ./assets/images/hero/start-screen-puppy-640.jpg   640w,-->
+<!--                ./assets/images/hero/start-screen-puppy-800.jpg   800w,-->
+<!--                ./assets/images/hero/start-screen-puppy-1200.jpg 1200w-->
+<!--            "-->
+<!--                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 698px"-->
+<!--                            alt=""-->
+<!--                            width="698"-->
+<!--                            height="728"-->
+<!--                            loading="eager"-->
+<!--                            fetchpriority="high"-->
+<!--                            decoding="async"-->
+<!--                    > -->
+<!--                </picture>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </section>-->
+<!--    &lt;!&ndash; ======== HERO CONTENT END ======== &ndash;&gt;-->
 
-    <!-- ======== ABOUT CONTENT START ======== -->
-    <section id="about" class="about">
-        <div class="about__container container">
-            <picture>
-                <source
-                        type="image/avif"
-                        srcset="
-            ./assets/images/about/about-pets-200.avif 200w,
-            ./assets/images/about/about-pets-250.avif 250w,
-            ./assets/images/about/about-pets-300.avif 300w,
-            ./assets/images/about/about-pets-600.avif 600w
-        "
-                        sizes="(max-width: 480px) 200px, (max-width: 768px) 250px, 300px"
-                >
-                <source
-                        type="image/webp"
-                        srcset="
-            ./assets/images/about/about-pets-200.webp 200w,
-            ./assets/images/about/about-pets-250.webp 250w,
-            ./assets/images/about/about-pets-300.webp 300w,
-            ./assets/images/about/about-pets-600.webp 600w
-        "
-                        sizes="(max-width: 480px) 200px, (max-width: 768px) 250px, 300px"
-                >
-                <img
-                        src="./assets/images/about/about-pets-300.jpg"
-                        srcset="
-            ./assets/images/about/about-pets-200.jpg 200w,
-            ./assets/images/about/about-pets-250.jpg 250w,
-            ./assets/images/about/about-pets-300.jpg 300w,
-            ./assets/images/about/about-pets-600.jpg 600w
-        "
-                        sizes="(max-width: 480px) 200px, (max-width: 768px) 250px, 300px"
-                        alt="A friendly puppy looking for a home"
-                        width="300"
-                        height="408"
-                        loading="lazy"
-                        decoding="async"
-                >
-            </picture>
+<!--    &lt;!&ndash; ======== ABOUT CONTENT START ======== &ndash;&gt;-->
+<!--    <section id="about" class="about">-->
+<!--        <div class="about__container container">-->
+<!--            <picture>-->
+<!--                <source-->
+<!--                        type="image/avif"-->
+<!--                        srcset="-->
+<!--            ./assets/images/about/about-pets-200.avif 200w,-->
+<!--            ./assets/images/about/about-pets-250.avif 250w,-->
+<!--            ./assets/images/about/about-pets-300.avif 300w,-->
+<!--            ./assets/images/about/about-pets-600.avif 600w-->
+<!--        "-->
+<!--                        sizes="(max-width: 480px) 200px, (max-width: 768px) 250px, 300px"-->
+<!--                >-->
+<!--                <source-->
+<!--                        type="image/webp"-->
+<!--                        srcset="-->
+<!--            ./assets/images/about/about-pets-200.webp 200w,-->
+<!--            ./assets/images/about/about-pets-250.webp 250w,-->
+<!--            ./assets/images/about/about-pets-300.webp 300w,-->
+<!--            ./assets/images/about/about-pets-600.webp 600w-->
+<!--        "-->
+<!--                        sizes="(max-width: 480px) 200px, (max-width: 768px) 250px, 300px"-->
+<!--                >-->
+<!--                <img-->
+<!--                        src="./assets/images/about/about-pets-300.jpg"-->
+<!--                        srcset="-->
+<!--            ./assets/images/about/about-pets-200.jpg 200w,-->
+<!--            ./assets/images/about/about-pets-250.jpg 250w,-->
+<!--            ./assets/images/about/about-pets-300.jpg 300w,-->
+<!--            ./assets/images/about/about-pets-600.jpg 600w-->
+<!--        "-->
+<!--                        sizes="(max-width: 480px) 200px, (max-width: 768px) 250px, 300px"-->
+<!--                        alt="A friendly puppy looking for a home"-->
+<!--                        width="300"-->
+<!--                        height="408"-->
+<!--                        loading="lazy"-->
+<!--                        decoding="async"-->
+<!--                >-->
+<!--            </picture>-->
 
-            <div class="about__content">
-                <h3>About the shelter
-                    “Cozy House”</h3>
-                <p class="about__text">Currently we have 121 dogs and 342 cats on our hands and statistics show that
-                    only 20% of them will find
-                    a family. The others will continue to live with us and will be waiting for a lucky chance to become
-                    dearly loved.</p>
-                <p class="about__text">We feed our wards with the best food and make sure that they do not get sick,
-                    feel comfortable (including
-                    psychologically) and well. We are supported by 87 volunteers and 28 employees of various skill
-                    levels.
-                    About 12% of the animals are taken by the shelter staff. Taking care of the animals, they become
-                    attached to the pets and would hardly ever leave them alone.</p>
-            </div>
-        </div>
+<!--            <div class="about__content">-->
+<!--                <h3>About the shelter-->
+<!--                    “Cozy House”</h3>-->
+<!--                <p class="about__text">Currently we have 121 dogs and 342 cats on our hands and statistics show that-->
+<!--                    only 20% of them will find-->
+<!--                    a family. The others will continue to live with us and will be waiting for a lucky chance to become-->
+<!--                    dearly loved.</p>-->
+<!--                <p class="about__text">We feed our wards with the best food and make sure that they do not get sick,-->
+<!--                    feel comfortable (including-->
+<!--                    psychologically) and well. We are supported by 87 volunteers and 28 employees of various skill-->
+<!--                    levels.-->
+<!--                    About 12% of the animals are taken by the shelter staff. Taking care of the animals, they become-->
+<!--                    attached to the pets and would hardly ever leave them alone.</p>-->
+<!--            </div>-->
+<!--        </div>-->
 
-    </section>
-    <!-- ======== ABOUT CONTENT START ======== -->
+<!--    </section>-->
+<!--    &lt;!&ndash; ======== ABOUT CONTENT START ======== &ndash;&gt;-->
 
-    <!-- ======== PETS CONTENT START ======== -->
-    <section id="pets" class="pets">
-        <div class="pets__container container">
-            <h3 class="pets__title">Our friends who <br> are looking for a house</h3>
+<!--    &lt;!&ndash; ======== PETS CONTENT START ======== &ndash;&gt;-->
+<!--    <section id="pets" class="pets">-->
+<!--        <div class="pets__container container">-->
+<!--            <h3 class="pets__title">Our friends who <br> are looking for a house</h3>-->
 
-            <!-- PETS CARD START-->
-            <div class="pets__content">
-                <button class="arrow-btn" aria-label="Prev slide">
-                    <svg class="icon" aria-hidden="true" width="14" height="6">
-                        <use href="./assets/icons/sprite.svg#arrow"></use>
-                    </svg>
-                </button>
+<!--            &lt;!&ndash; PETS CARD START&ndash;&gt;-->
+<!--            <div class="pets__content">-->
+<!--                <button class="arrow-btn" aria-label="Prev slide">-->
+<!--                    <svg class="icon" aria-hidden="true" width="14" height="6">-->
+<!--                        <use href="./assets/icons/sprite.svg#arrow"></use>-->
+<!--                    </svg>-->
+<!--                </button>-->
 
-                <div class="pets__grid">
-                    <article class="pet-card">
-                        <h2 class="visually-hidden">Katrine</h2>
-                        <figure class="pet-card__figure">
-                            <img src="./assets/images/pets/pets-katrine.png"
-                                 alt="Katrine - a graceful British Shorthair cat"
-                                 width="270"
-                                 height="270"
-                                 loading="lazy"
-                                 decoding="async"
-                                 class="pet-card__image">
-                            <figcaption class="pet-card__name">Katrine</figcaption>
-                        </figure>
-                        <button class="pet-card__button" type="button">Learn more</button>
-                    </article>
+<!--                <div class="pets__grid">-->
+<!--                    <article class="pet-card">-->
+<!--                        <h2 class="visually-hidden">Katrine</h2>-->
+<!--                        <figure class="pet-card__figure">-->
+<!--                            <img src="./assets/images/pets/pets-katrine.png"-->
+<!--                                 alt="Katrine - a graceful British Shorthair cat"-->
+<!--                                 width="270"-->
+<!--                                 height="270"-->
+<!--                                 loading="lazy"-->
+<!--                                 decoding="async"-->
+<!--                                 class="pet-card__image">-->
+<!--                            <figcaption class="pet-card__name">Katrine</figcaption>-->
+<!--                        </figure>-->
+<!--                        <button class="pet-card__button" type="button">Learn more</button>-->
+<!--                    </article>-->
 
-                    <article class="pet-card">
-                        <h2 class="visually-hidden">Jennifer</h2>
-                        <figure class="pet-card__figure">
-                            <img src="./assets/images/pets/pets-jennifer.png"
-                                 alt="Jennifer - a cheerful and energetic dog"
-                                 width="270"
-                                 height="270"
-                                 loading="lazy"
-                                 decoding="async"
-                                 class="pet-card__image">
-                            <figcaption class="pet-card__name">Jennifer</figcaption>
-                        </figure>
-                        <button class="pet-card__button" type="button">Learn more</button>
-                    </article>
+<!--                    <article class="pet-card">-->
+<!--                        <h2 class="visually-hidden">Jennifer</h2>-->
+<!--                        <figure class="pet-card__figure">-->
+<!--                            <img src="./assets/images/pets/pets-jennifer.png"-->
+<!--                                 alt="Jennifer - a cheerful and energetic dog"-->
+<!--                                 width="270"-->
+<!--                                 height="270"-->
+<!--                                 loading="lazy"-->
+<!--                                 decoding="async"-->
+<!--                                 class="pet-card__image">-->
+<!--                            <figcaption class="pet-card__name">Jennifer</figcaption>-->
+<!--                        </figure>-->
+<!--                        <button class="pet-card__button" type="button">Learn more</button>-->
+<!--                    </article>-->
 
-                    <article class="pet-card">
-                        <h2 class="visually-hidden">Woody</h2>
-                        <figure class="pet-card__figure">
-                            <img src="./assets/images/pets/pets-woody.png"
-                                 alt="Woody - a friendly and loyal dog"
-                                 width="270"
-                                 height="270"
-                                 loading="lazy"
-                                 decoding="async"
-                                 class="pet-card__image">
-                            <figcaption class="pet-card__name">Woody</figcaption>
-                        </figure>
-                        <button class="pet-card__button" type="button">Learn more</button>
-                    </article>
-                </div>
+<!--                    <article class="pet-card">-->
+<!--                        <h2 class="visually-hidden">Woody</h2>-->
+<!--                        <figure class="pet-card__figure">-->
+<!--                            <img src="./assets/images/pets/pets-woody.png"-->
+<!--                                 alt="Woody - a friendly and loyal dog"-->
+<!--                                 width="270"-->
+<!--                                 height="270"-->
+<!--                                 loading="lazy"-->
+<!--                                 decoding="async"-->
+<!--                                 class="pet-card__image">-->
+<!--                            <figcaption class="pet-card__name">Woody</figcaption>-->
+<!--                        </figure>-->
+<!--                        <button class="pet-card__button" type="button">Learn more</button>-->
+<!--                    </article>-->
+<!--                </div>-->
 
-                <button class="arrow-btn" aria-label="Next slide">
-                    <svg class="icon icon--arrow-right" width="14" height="6" aria-hidden="true">
-                        <use href="./assets/icons/sprite.svg#arrow"></use>
-                    </svg>
-                </button>
-            </div>
-            <!-- PETS CARD END-->
-            
-            <a href="pets.html" class="pets__button">Get to know the rest</a>
-        </div>
-    </section>
-    <!-- ======== PETS CONTENT END ======== -->
+<!--                <button class="arrow-btn" aria-label="Next slide">-->
+<!--                    <svg class="icon icon&#45;&#45;arrow-right" width="14" height="6" aria-hidden="true">-->
+<!--                        <use href="./assets/icons/sprite.svg#arrow"></use>-->
+<!--                    </svg>-->
+<!--                </button>-->
+<!--            </div>-->
+<!--            &lt;!&ndash; PETS CARD END&ndash;&gt;-->
+<!--            -->
+<!--            <a href="pets.html" class="pets__button">Get to know the rest</a>-->
+<!--        </div>-->
+<!--    </section>-->
+<!--    &lt;!&ndash; ======== PETS CONTENT END ======== &ndash;&gt;-->
 
-    <!-- ======== HELP CONTENT START ======== -->
-    <section id="help" class="help">
-        <div class="help__container container">
-            <h3 class="help__title">How you can help <br>
-                our shelter</h3>
-            <div class="help__grid">
-                <!-- FIRST ROW START-->
-                <div class="help__row">
-                    <div class="help__item">
-                        <svg class="icon" aria-hidden="true" width="60" height="60">
-                            <use href="./assets/icons/sprite.svg#petFood"></use>
-                        </svg>
-                        <h4 class="help__item-text">Pet food</h4>
-                    </div>
-                    <div class="help__item">
-                        <svg class="icon" aria-hidden="true" width="60" height="60">
-                            <use href="./assets/icons/sprite.svg#transportation"></use>
-                        </svg>
-                        <h4 class="help__item-text">Transportation</h4>
-                    </div>
-                    <div class="help__item">
-                        <svg class="icon" aria-hidden="true" width="60" height="60">
-                            <use href="./assets/icons/sprite.svg#toys"></use>
-                        </svg>
-                        <h4 class="help__item-text">Toys</h4>
-                    </div>
-                    <div class="help__item">
-                        <svg class="icon" aria-hidden="true" width="60" height="60">
-                            <use href="./assets/icons/sprite.svg#bowlsCups"></use>
-                        </svg>
-                        <h4 class="help__item-text">Bowls and cups</h4>
-                    </div>
-                    <div class="help__item">
-                        <svg class="icon" aria-hidden="true" width="60" height="60">
-                            <use href="./assets/icons/sprite.svg#shampoos"></use>
-                        </svg>
-                        <h4 class="help__item-text">Shampoos</h4>
-                    </div>
-                </div>
-                <!-- FIRST ROW END START-->
+<!--    &lt;!&ndash; ======== HELP CONTENT START ======== &ndash;&gt;-->
+<!--    <section id="help" class="help">-->
+<!--        <div class="help__container container">-->
+<!--            <h3 class="help__title">How you can help <br>-->
+<!--                our shelter</h3>-->
+<!--            <div class="help__grid">-->
+<!--                &lt;!&ndash; FIRST ROW START&ndash;&gt;-->
+<!--                <div class="help__row">-->
+<!--                    <div class="help__item">-->
+<!--                        <svg class="icon" aria-hidden="true" width="60" height="60">-->
+<!--                            <use href="./assets/icons/sprite.svg#petFood"></use>-->
+<!--                        </svg>-->
+<!--                        <h4 class="help__item-text">Pet food</h4>-->
+<!--                    </div>-->
+<!--                    <div class="help__item">-->
+<!--                        <svg class="icon" aria-hidden="true" width="60" height="60">-->
+<!--                            <use href="./assets/icons/sprite.svg#transportation"></use>-->
+<!--                        </svg>-->
+<!--                        <h4 class="help__item-text">Transportation</h4>-->
+<!--                    </div>-->
+<!--                    <div class="help__item">-->
+<!--                        <svg class="icon" aria-hidden="true" width="60" height="60">-->
+<!--                            <use href="./assets/icons/sprite.svg#toys"></use>-->
+<!--                        </svg>-->
+<!--                        <h4 class="help__item-text">Toys</h4>-->
+<!--                    </div>-->
+<!--                    <div class="help__item">-->
+<!--                        <svg class="icon" aria-hidden="true" width="60" height="60">-->
+<!--                            <use href="./assets/icons/sprite.svg#bowlsCups"></use>-->
+<!--                        </svg>-->
+<!--                        <h4 class="help__item-text">Bowls and cups</h4>-->
+<!--                    </div>-->
+<!--                    <div class="help__item">-->
+<!--                        <svg class="icon" aria-hidden="true" width="60" height="60">-->
+<!--                            <use href="./assets/icons/sprite.svg#shampoos"></use>-->
+<!--                        </svg>-->
+<!--                        <h4 class="help__item-text">Shampoos</h4>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                &lt;!&ndash; FIRST ROW END START&ndash;&gt;-->
 
-                <!-- SECOND ROW START -->
-                <div class="help__row help__row--center">
-                    <div class="help__item">
-                        <svg class="icon" aria-hidden="true" width="60" height="60">
-                            <use href="./assets/icons/sprite.svg#vitamins"></use>
-                        </svg>
-                        <h4 class="help__item-text">Vitamins</h4>
-                    </div>
-                    <div class="help__item">
-                        <svg class="icon" aria-hidden="true" width="60" height="60">
-                            <use href="./assets/icons/sprite.svg#medicines"></use>
-                        </svg>
-                        <h4 class="help__item-text">Medicines</h4>
-                    </div>
-                    <div class="help__item">
-                        <svg class="icon" aria-hidden="true" width="60" height="60">
-                            <use href="./assets/icons/sprite.svg#collarsLeashes"></use>
-                        </svg>
-                        <h4 class="help__item-text">Collars / leashes</h4>
-                    </div>
-                    <div class="help__item">
-                        <svg class="icon" aria-hidden="true" width="60" height="60">
-                            <use href="./assets/icons/sprite.svg#sleepingArea"></use>
-                        </svg>
-                        <h4 class="help__item-text">Sleeping areas</h4>
-                    </div>
-                </div>
-                <!-- SECOND ROW END  -->
-            </div>
-        </div>
-    </section>
-    <!-- ======== HELP CONTENT END ======== -->
+<!--                &lt;!&ndash; SECOND ROW START &ndash;&gt;-->
+<!--                <div class="help__row help__row&#45;&#45;center">-->
+<!--                    <div class="help__item">-->
+<!--                        <svg class="icon" aria-hidden="true" width="60" height="60">-->
+<!--                            <use href="./assets/icons/sprite.svg#vitamins"></use>-->
+<!--                        </svg>-->
+<!--                        <h4 class="help__item-text">Vitamins</h4>-->
+<!--                    </div>-->
+<!--                    <div class="help__item">-->
+<!--                        <svg class="icon" aria-hidden="true" width="60" height="60">-->
+<!--                            <use href="./assets/icons/sprite.svg#medicines"></use>-->
+<!--                        </svg>-->
+<!--                        <h4 class="help__item-text">Medicines</h4>-->
+<!--                    </div>-->
+<!--                    <div class="help__item">-->
+<!--                        <svg class="icon" aria-hidden="true" width="60" height="60">-->
+<!--                            <use href="./assets/icons/sprite.svg#collarsLeashes"></use>-->
+<!--                        </svg>-->
+<!--                        <h4 class="help__item-text">Collars / leashes</h4>-->
+<!--                    </div>-->
+<!--                    <div class="help__item">-->
+<!--                        <svg class="icon" aria-hidden="true" width="60" height="60">-->
+<!--                            <use href="./assets/icons/sprite.svg#sleepingArea"></use>-->
+<!--                        </svg>-->
+<!--                        <h4 class="help__item-text">Sleeping areas</h4>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                &lt;!&ndash; SECOND ROW END  &ndash;&gt;-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </section>-->
+<!--    &lt;!&ndash; ======== HELP CONTENT END ======== &ndash;&gt;-->
 
-    <!-- ======== DONATION CONTENT START ======== -->
-    <section class="donation">
-        <div class="donation__container container">
-            <div class="donation__image">
-                <img src="./assets/images/donations/donation-dog.png"
-                     alt="A dog waiting for your donation"
-                     width="505"
-                     height="261"
-                     loading="lazy"
-                     decoding="async">
-            </div>
+<!--    &lt;!&ndash; ======== DONATION CONTENT START ======== &ndash;&gt;-->
+<!--    <section class="donation">-->
+<!--        <div class="donation__container container">-->
+<!--            <div class="donation__image">-->
+<!--                <img src="./assets/images/donations/donation-dog.png"-->
+<!--                     alt="A dog waiting for your donation"-->
+<!--                     width="505"-->
+<!--                     height="261"-->
+<!--                     loading="lazy"-->
+<!--                     decoding="async">-->
+<!--            </div>-->
 
-            <div class="donation__content">
-                <h3 class="donation__title">You can also <br> make a donation</h3>
+<!--            <div class="donation__content">-->
+<!--                <h3 class="donation__title">You can also <br> make a donation</h3>-->
 
-                <p class="donation__bank">Name of the bank / Type of bank account</p>
+<!--                <p class="donation__bank">Name of the bank / Type of bank account</p>-->
 
-                <a href="#" class="donation__card">
-                    <svg class="donation__icon" width="30" height="23" aria-hidden="true">
-                        <use href="./assets/icons/sprite.svg#creditCard"></use>
-                    </svg>
-                    <span class="donation__number">8380 2880 8028 8791 7435</span>
-                </a>
+<!--                <a href="#" class="donation__card">-->
+<!--                    <svg class="donation__icon" width="30" height="23" aria-hidden="true">-->
+<!--                        <use href="./assets/icons/sprite.svg#creditCard"></use>-->
+<!--                    </svg>-->
+<!--                    <span class="donation__number">8380 2880 8028 8791 7435</span>-->
+<!--                </a>-->
 
-                <p class="donation__legal">
-                    Legal information and lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Maecenas a ipsum at libero sagittis dignissim sed ac diam.
-                    Praesent ultrices maximus tortor et vulputate.
-                    Interdum et malesuada fames ac ante ipsum primis in faucibus.
-                </p>
-            </div>
-        </div>
-    </section>
-    <!-- ======== DONATION CONTENT END ======== -->
-</main>
+<!--                <p class="donation__legal">-->
+<!--                    Legal information and lorem ipsum dolor sit amet, consectetur adipiscing elit.-->
+<!--                    Maecenas a ipsum at libero sagittis dignissim sed ac diam.-->
+<!--                    Praesent ultrices maximus tortor et vulputate.-->
+<!--                    Interdum et malesuada fames ac ante ipsum primis in faucibus.-->
+<!--                </p>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </section>-->
+<!--    &lt;!&ndash; ======== DONATION CONTENT END ======== &ndash;&gt;-->
+<!--</main>-->
 <!-- ======== MAIN CONTENT END ======== -->
 
 <!-- ======== FOOTER START ======== -->
-<footer id="contacts" class="footer gradient--footer">
-    <div class="footer__container container">
-        <!-- COLUMN 1: QUESTION AND OFFERS START -->
-        <div class="footer__column">
-            <h3 class="footer__title">For questions <br> and suggestions</h3>
-            <ul class="footer__contact-list">
-                <li class="footer__contact-item">
-                    <svg class="footer__icon" width="40" height="32" aria-hidden="true" focusable="false">
-                        <use href="./assets/icons/sprite.svg#email"></use>
-                    </svg>
-                    <a href="mailto:email@shelter.com" class="footer__link">email@shelter.com</a>
-                </li>
-                <li class="footer__contact-item">
-                    <svg class="footer__icon" width="40" height="32" aria-hidden="true" focusable="false">
-                        <use href="./assets/icons/sprite.svg#phone"></use>
-                    </svg>
-                    <a href="tel:+136745677554" class="footer__link">+13 674 567 75 54</a>
-                </li>
-            </ul>
-        </div>
-        <!-- COLUMN 1: QUESTION AND OFFERS END -->
-        
-        <!-- COLUMN 2: ADDRESS START -->
-        <div class="footer__column">
-            <h3 class="footer__title">We are waiting <br> for your visit</h3>
-            <ul class="footer__contact-list">
-                <li class="footer__contact-item">
-                    <svg class="footer__icon" width="22" height="32" aria-hidden="true" focusable="false">
-                        <use href="./assets/icons/sprite.svg#pin"></use>
-                    </svg>
-                    <address class="footer__address">
-                        <a href="https://maps.google.com/?q=1+Central+Street+Boston" target="_blank"
-                           rel="noopener noreferrer">
-                            1 Central Street, Boston <br> (entrance from the store)
-                        </a>
-                    </address>
-                </li>
-                <li class="footer__contact-item">
-                    <svg class="footer__icon" width="22" height="32" aria-hidden="true" focusable="false">
-                        <use href="./assets/icons/sprite.svg#pin"></use>
-                    </svg>
-                    <address class="footer__address">
-                        <a href="https://maps.google.com/?q=18+South+Park+London" target="_blank"
-                           rel="noopener noreferrer">
-                            18 South Park, London
-                        </a>
-                    </address>
-                </li>
-            </ul>
-        </div>
-        <!-- COLUMN 2: ADDRESS END -->
-        
-        <!-- COLUMN 3: IMAGE START -->
-        <div class="footer__image">
-            <img src="./assets/images/footer/footer-puppy.png"
-                 alt="A cute puppy"
-                 width="300"
-                 height="310"
-                 loading="lazy"
-                 decoding="async">
-        </div>
-        <!-- COLUMN 3: IMAGE END -->
-    </div>
-</footer>
+<!--<footer id="contacts" class="footer gradient&#45;&#45;footer">-->
+<!--    <div class="footer__container container">-->
+<!--        &lt;!&ndash; COLUMN 1: QUESTION AND OFFERS START &ndash;&gt;-->
+<!--        <div class="footer__column">-->
+<!--            <h3 class="footer__title">For questions <br> and suggestions</h3>-->
+<!--            <ul class="footer__contact-list">-->
+<!--                <li class="footer__contact-item">-->
+<!--                    <svg class="footer__icon" width="40" height="32" aria-hidden="true" focusable="false">-->
+<!--                        <use href="./assets/icons/sprite.svg#email"></use>-->
+<!--                    </svg>-->
+<!--                    <a href="mailto:email@shelter.com" class="footer__link">email@shelter.com</a>-->
+<!--                </li>-->
+<!--                <li class="footer__contact-item">-->
+<!--                    <svg class="footer__icon" width="40" height="32" aria-hidden="true" focusable="false">-->
+<!--                        <use href="./assets/icons/sprite.svg#phone"></use>-->
+<!--                    </svg>-->
+<!--                    <a href="tel:+136745677554" class="footer__link">+13 674 567 75 54</a>-->
+<!--                </li>-->
+<!--            </ul>-->
+<!--        </div>-->
+<!--        &lt;!&ndash; COLUMN 1: QUESTION AND OFFERS END &ndash;&gt;-->
+<!--        -->
+<!--        &lt;!&ndash; COLUMN 2: ADDRESS START &ndash;&gt;-->
+<!--        <div class="footer__column">-->
+<!--            <h3 class="footer__title">We are waiting <br> for your visit</h3>-->
+<!--            <ul class="footer__contact-list">-->
+<!--                <li class="footer__contact-item">-->
+<!--                    <svg class="footer__icon" width="22" height="32" aria-hidden="true" focusable="false">-->
+<!--                        <use href="./assets/icons/sprite.svg#pin"></use>-->
+<!--                    </svg>-->
+<!--                    <address class="footer__address">-->
+<!--                        <a href="https://maps.google.com/?q=1+Central+Street+Boston" target="_blank"-->
+<!--                           rel="noopener noreferrer">-->
+<!--                            1 Central Street, Boston <br> (entrance from the store)-->
+<!--                        </a>-->
+<!--                    </address>-->
+<!--                </li>-->
+<!--                <li class="footer__contact-item">-->
+<!--                    <svg class="footer__icon" width="22" height="32" aria-hidden="true" focusable="false">-->
+<!--                        <use href="./assets/icons/sprite.svg#pin"></use>-->
+<!--                    </svg>-->
+<!--                    <address class="footer__address">-->
+<!--                        <a href="https://maps.google.com/?q=18+South+Park+London" target="_blank"-->
+<!--                           rel="noopener noreferrer">-->
+<!--                            18 South Park, London-->
+<!--                        </a>-->
+<!--                    </address>-->
+<!--                </li>-->
+<!--            </ul>-->
+<!--        </div>-->
+<!--        &lt;!&ndash; COLUMN 2: ADDRESS END &ndash;&gt;-->
+<!--        -->
+<!--        &lt;!&ndash; COLUMN 3: IMAGE START &ndash;&gt;-->
+<!--        <div class="footer__image">-->
+<!--            <img src="./assets/images/footer/footer-puppy.png"-->
+<!--                 alt="A cute puppy"-->
+<!--                 width="300"-->
+<!--                 height="310"-->
+<!--                 loading="lazy"-->
+<!--                 decoding="async">-->
+<!--        </div>-->
+<!--        &lt;!&ndash; COLUMN 3: IMAGE END &ndash;&gt;-->
+<!--    </div>-->
+<!--</footer>-->
 <!-- ======== FOOTER END ======== -->
 </body>
 </html>

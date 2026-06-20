@@ -9,11 +9,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: clamp(1.875rem, 1.875rem + 0vw, 1.875rem);
-}
-
-.header--padding {
-    padding-bottom: clamp(1.875rem, 1.875rem + 0vw, 1.875rem);
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding-top: 1.875rem;
+    padding-left: var(--padding-header-container);
+    padding-right: var(--padding-header-container);
 }
 
 /* ==========================================================================
@@ -21,20 +22,114 @@
    ========================================================================== */
 
 .header__title {
+    margin: 0;
+    
     font-family: var(--font-family-serif);
     font-size: 2rem;
     line-height: 1.1;
     letter-spacing: 0.06em;
-    margin: 0;
 }
 
 .header__subtitle {
-    margin-top: 10px;
+    margin-top: 0.625rem;
+
     font-size: 0.8125rem;
     line-height: 1;
     letter-spacing: 0.1em;
     text-align: center;
 }
+
+/* ==========================================================================
+   Hamburger Button
+   ========================================================================== */
+
+.hamburger {
+    position: relative;
+    z-index: 1000;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 1.875rem;
+    min-height: 1.375rem;
+
+    background: transparent;
+    border: none;
+
+    cursor: pointer;
+}
+
+@media (min-width: 768px) {
+    .hamburger {
+        display: none !important;
+    }
+}
+
+/* ==========================================================================
+   Three stripes
+   ========================================================================== */
+
+.hamburger-box {
+    position: relative;
+
+    display: block;
+    width: 30px;
+    height: 22px;
+}
+
+.hamburger-inner {
+    position: absolute;
+    top: 50%;
+    left: 0;
+
+    display: block;
+    width: 100%;
+    height: 2px;
+
+    background-color: var(--color-primary);
+    border-radius: 2px;
+
+    transform: translateY(-50%);
+    transition: background-color 0.3s ease;
+}
+
+.hamburger-inner::before,
+.hamburger-inner::after {
+    position: absolute;
+    left: 0;
+
+    display: block;
+    width: 100%;
+    height: 2px;
+
+    content: '';
+
+    background-color: var(--color-primary);
+    border-radius: 2px;
+
+    transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55),
+    background-color 0.3s ease;
+}
+
+.hamburger-inner::before {
+    top: -10px;
+}
+
+.hamburger-inner::after {
+    top: 10px;
+}
+
+
+/* ==========================================================================
+   Light version (pets page)
+   ========================================================================== */
+
+.header--light .hamburger-inner,
+.header--light .hamburger-inner::before,
+.header--light .hamburger-inner::after {
+    background-color: var(--color-dark-l);
+}
+
 
 /* ==========================================================================
    Modifier: Light background (pets page)
@@ -45,14 +140,14 @@
     color: var(--color-dark-l);
 }
 .header--light .header__nav a[aria-current="page"] {
-    color: var(--color-dark-l);    /* dark */
+    color: var(--color-dark-l);
 }
 
 .header--light .header__nav a {
-    color: var(--color-dark-l);    /* #545454 (dark grey) */
+    color: var(--color-dark-l);
 }
 .header--light .header__nav a:hover {
-    color: var(--color-dark-3xl);   /* almost black */
+    color: var(--color-dark-3xl);
     border-bottom-color: var(--color-primary);
 }
 
@@ -61,24 +156,39 @@
    ========================================================================== */
 
 .header__nav {
-    display: flex;
-    gap: 2.1875rem;
+    display: none;
 }
 
 .header__nav a {
     border-bottom: 3px solid transparent;
+
     color: var(--color-dark-s);
+
     transition: border-color 0.3s ease, color 0.3s ease;
 }
 
 .header__nav a:hover {
     border-bottom-color: var(--color-primary);
+
     color: var(--color-light-s);
 }
 
 .header__nav a[aria-current="page"] {
     border-bottom-color: var(--color-primary);
+
     color: var(--color-light-s);
+
     cursor: default;
     pointer-events: none;
+}
+
+/* ==========================================================================
+   Tablet
+   ========================================================================== */
+
+@media (min-width: 768px) {
+    .header__nav {
+        display: flex;
+        gap: 2.1875rem;
+    }
 }
