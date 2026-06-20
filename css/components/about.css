@@ -3,6 +3,7 @@
 /* ==========================================================================
    About Container
    ========================================================================== */
+
 .about {
     padding-top: var(--padding-section-top);
     padding-bottom: var(--padding-section-bottom);
@@ -10,21 +11,111 @@
 
 .about__container {
     display: flex;
+    flex-direction: column-reverse;
     justify-content: center;
     align-items: center;
-    gap: 7.20rem;
+    gap: 42px;
+}
+
+.about__container img {
+    max-width: 260px;
 }
 
 .about__content {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    gap: 25px;
-    max-width: 430px;
+    justify-content: center;
+    align-items: center;
+    gap: 22px;
+    max-width: 270px;
+}
+
+.about__title {
+    text-align: center;
 }
 
 .about__text {
     color: var(--color-dark-l);
     font-size: 0.9375rem;
     line-height: 1.6;
+    text-align: justify;
+}
+
+
+@media (min-width: 48rem) {
+
+    /* ==========================================================================
+       About Container
+       ========================================================================== */
+   
+    .about {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
+
+    .about__container {
+        display: flex;
+        /*flex-direction: column;*/
+        justify-content: center;
+        align-items: center;
+        gap: 5rem;
+    }
+
+    .about__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 1.5625rem;
+        max-width: 26.875rem;
+    }
+    
+    .about__title {
+        text-align: left;
+    }
+
+    .about__text {
+        color: var(--color-dark-l);
+        font-size: 0.9375rem;
+        line-height: 1.6;
+        letter-spacing: 0;
+        text-align: left;
+    }
+
+    .about__container img {
+        max-width: 18.75rem;
+    }
+}
+
+@media (min-width: 80rem) {
+    
+    /* ==========================================================================
+       About Container
+       ========================================================================== */
+    
+    .about {
+        padding-top: var(--padding-section-top);
+        padding-bottom: var(--padding-section-bottom);
+    }
+
+    .about__container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 7.20rem;
+    }
+
+    .about__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 1.5625rem;
+        max-width: 26.875rem;
+    }
+
+    .about__text {
+        color: var(--color-dark-l);
+        font-size: 0.9375rem;
+        line-height: 1.6;
+    }
 }
