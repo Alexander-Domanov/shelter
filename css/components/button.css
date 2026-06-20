@@ -86,7 +86,6 @@
     border-color: var(--color-primary-light);
 }
 
-/* Disabled state – серая обводка */
 .arrow-btn:disabled {
     border-color: var(--color-dark-s);
     cursor: not-allowed;
@@ -95,7 +94,7 @@
 
 .arrow-btn:disabled .icon {
     сolor: var(--color-dark-s);
-    opacity: 0.6;/* серый цвет */
+    opacity: 0.6;
 }
 
 .arrow-btn:disabled:hover {
