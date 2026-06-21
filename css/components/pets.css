@@ -148,7 +148,7 @@
 @media (min-width: 48rem) {
     .pets__container {
         padding-top: 5rem;
-        padding-bottom: 5rem;
+        padding-bottom: 100px;
 
         gap: 3.75rem;
     }
@@ -182,7 +182,7 @@
 @media (min-width: 80rem) {
     .pets__container {
         padding-top: 5rem;
-        padding-bottom: 5rem;
+        padding-bottom: 100px;
     }
 
     .pets__grid {
