@@ -57,7 +57,7 @@
 @media (min-width: 48rem) {
     .help {
         padding-top: 5rem;
-        padding-bottom: 5rem;
+        padding-bottom: 6.25rem;
     }
 
     .help__container {
