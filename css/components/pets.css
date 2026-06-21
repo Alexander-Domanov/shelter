@@ -11,11 +11,11 @@
 .pets__container {
     display: flex;
     flex-direction: column;
-    gap: 3.75rem;
+    gap: 2.625rem;
     align-items: center;
 
-    padding-top: var(--padding-section-top);
-    padding-bottom: var(--padding-section-bottom);
+    padding-top: 2.625rem;
+    padding-bottom: 2.625rem;
 }
 
 .pets__title {
@@ -32,16 +32,20 @@
 
 .pets__content {
     display: flex;
-    justify-content: space-between;
+    
+    justify-content: center;
     align-items: center;
-    gap: 53px;
+    row-gap: 1.25rem;
+    column-gap: 5rem;
+    
+    flex-wrap: wrap;
 }
 
 .visually-hidden {
     position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
+    width: 0.0625rem;
+    height: 0.0625rem;
+    margin: -0.0625rem;
     padding: 0;
     border: 0;
     clip: rect(0, 0, 0, 0);
@@ -50,12 +54,32 @@
 
 .pets__grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr;
     gap: 5.625rem;
+
+    justify-items: center;
+    align-items: center;
+
+    order: -1;
+    flex: 0 0 100%;
+}
+
+.pets__grid .pet-card:nth-child(n+2) {
+    display: none;
+}
+
+.arrow-btn:first-of-type {
+    order: 1; /* arrow prev first */
+    flex: 0 0 auto;
+}
+
+.arrow-btn:last-of-type {
+    order: 2; /* arrow next last */
+    flex: 0 0 auto;
 }
 
 .pet-card {
-    max-width: 270px;
+    max-width: 16.875rem;
     
     display: flex;
     flex-direction: column;
@@ -108,7 +132,7 @@
 
 .pets__pagination {
     display: flex;
-    gap: 20px;
+    gap: 1.25rem;
     align-items: center;
 }
 
@@ -119,4 +143,70 @@
     letter-spacing: 0.06em;
     text-align: center;
     color: var(--color-dark-3xl);
+}
+
+@media (min-width: 48rem) {
+    .pets__container {
+        padding-top: 5rem;
+        padding-bottom: 100px;
+
+        gap: 3.75rem;
+    }
+    
+    .pets__content {
+        justify-content: space-between;
+        align-items: center;
+        gap: 0.75rem;
+        flex-wrap: nowrap;
+    }
+
+    .pets__grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2.5rem;
+
+        order: 0;
+        flex: 0 1 auto;
+    }
+
+    .pets__grid .pet-card:nth-child(2) {
+        display: flex;
+    }
+
+    .arrow-btn:first-of-type,
+    .arrow-btn:last-of-type {
+        order: 0;
+    }
+    
+}
+
+@media (min-width: 80rem) {
+    .pets__container {
+        padding-top: 5rem;
+        padding-bottom: 100px;
+    }
+
+    .pets__grid {
+        grid-template-columns: repeat(3, 1fr); /* ← 3 колонки */
+        gap: 5.625rem;
+    }
+
+ /* ==========================================================================
+    PETS PAGE
+    ========================================================================== */
+    
+    /* Modifier for pets page – 4 columns */
+    .pets__grid--4cols {
+        grid-template-columns: repeat(4, 1fr);
+        row-gap: 1.875rem;
+        column-gap: 2.5rem;
+    }
+
+    .pets__grid .pet-card:nth-child(3) {
+        display: flex;
+    }
+    
+    .pets__content {
+        gap: 3.3125rem;
+        flex-wrap: nowrap;
+    }
 }
