@@ -124,11 +124,15 @@
    ========================================================================== */
 
 /* Modifier for pets page – 4 columns */
-.pets__grid--4cols {
-    grid-template-columns: repeat(4, 1fr);
-    row-gap: 1.875rem;
-    column-gap: 2.5rem;
-}
+/*.pets__grid--4cols {*/
+/*    grid-template-columns: repeat(1, 1fr);*/
+/*    row-gap: 1.875rem;*/
+/*    column-gap: 2.5rem;*/
+/*}*/
+
+/*.pets__grid--4cols .pet-card:nth-child(-n+3) {*/
+/*    display: flex;*/
+/*}*/
 
 .pets__pagination {
     display: flex;
@@ -172,6 +176,10 @@
         display: flex;
     }
 
+    .pets__grid--4cols .pet-card:nth-child(-n+6) {
+        display: flex;
+    }
+
     .arrow-btn:first-of-type,
     .arrow-btn:last-of-type {
         order: 0;
@@ -186,7 +194,7 @@
     }
 
     .pets__grid {
-        grid-template-columns: repeat(3, 1fr); /* ← 3 колонки */
+        grid-template-columns: repeat(3, 1fr);
         gap: 5.625rem;
     }
 
@@ -202,6 +210,10 @@
     }
 
     .pets__grid .pet-card:nth-child(3) {
+        display: flex;
+    }
+
+    .pets__grid--4cols .pet-card:nth-child(n+2) {
         display: flex;
     }
     
