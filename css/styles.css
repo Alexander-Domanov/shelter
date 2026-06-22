@@ -11,7 +11,7 @@
 @import url('./components/help.css');
 @import url('./components/donation.css');
 @import url('./components/footer.css');
-/*@import url('media.css');*/
+@import url('./components/page-pets.css');
 
 .visually-hidden {
     position: absolute;
