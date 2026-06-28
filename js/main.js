@@ -1,7 +1,8 @@
 import { initHamburger } from './modules/hamburger.js';
 import { initResizeAnimationStopper } from './modules/utils.js';
-import { renderPets } from './modules/renderPets.js';
 import { initPopup } from './modules/popup.js';
+import { renderPets } from './modules/renderPets.js';
+import { initSlider } from './modules/slider.js';
 
 async function loadPets() {
     try {
@@ -19,13 +20,17 @@ async function initApp() {
     initResizeAnimationStopper();
 
     const petsData = await loadPets();
-    
-    if (petsData) {
-        const grid = document.querySelector('.pets__grid') || document.querySelector('.page-pets__grid');
 
-        if (grid) {
-            renderPets(petsData, grid);
+    if (petsData) {
+        const sliderGrid = document.querySelector('.pets__grid');
+        const catalogGrid = document.querySelector('.page-pets__grid');
+
+        if (sliderGrid) {
+            initSlider(petsData, sliderGrid);
+            initPopup(petsData);
             
+        } else if (catalogGrid) {
+            renderPets(petsData, catalogGrid);
             initPopup(petsData);
         }
     }
