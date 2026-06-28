@@ -5,6 +5,12 @@ export function initPopup(petsData) {
     const grid = document.querySelector('.pets__grid') || document.querySelector('.page-pets__grid');
 
     if (!grid || !dialog) return;
+    
+    const toggleScroll = (isLocked) => {
+        const value = isLocked ? 'hidden' : '';
+        document.body.style.overflow = value;
+        document.documentElement.style.overflow = value;
+    };
 
     grid.addEventListener('click', (e) => {
         const card = e.target.closest('.pet-card');
@@ -14,7 +20,7 @@ export function initPopup(petsData) {
         if (pet) {
             const formatList = (arr) => arr.length === 1 && arr[0] === 'none' ? 'None' : arr.join(', ');
 
-           container.innerHTML = `
+            container.innerHTML = `
                 <img src="${pet.img}" alt="${pet.name}" class="popup__img" fetchpriority="high" loading="eager">
                 <div class="popup__info">
                     <h3 class="popup__title">${pet.name}</h3>
@@ -28,18 +34,22 @@ export function initPopup(petsData) {
                     </ul>
                 </div>
             `;
-            
+
             dialog.showModal();
+            toggleScroll(true);
         }
     });
 
-    closeBtn.addEventListener('click', () => {
+    const closePopup = () => {
         dialog.close();
-    });
-
+        toggleScroll(false);
+    };
+    
+    closeBtn.addEventListener('click', closePopup);
+    
     dialog.addEventListener('click', (e) => {
         if (e.target === dialog) {
-            dialog.close();
+            closePopup();
         }
     });
 }
