@@ -5,6 +5,7 @@
 
     justify-items: center;
     align-items: center;
+    min-height: 930px;
 
     order: -1;
     flex: 0 0 100%;

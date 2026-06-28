@@ -1,7 +1,7 @@
 import { initHamburger } from './modules/hamburger.js';
 import { initResizeAnimationStopper } from './modules/utils.js';
 import { initPopup } from './modules/popup.js';
-import { renderPets } from './modules/renderPets.js';
+import { initPagination } from './modules/pagination.js';
 import { initSlider } from './modules/slider.js';
 
 async function loadPets() {
@@ -24,14 +24,15 @@ async function initApp() {
     if (petsData) {
         const sliderGrid = document.querySelector('.pets__grid');
         const catalogGrid = document.querySelector('.page-pets__grid');
-
+       
+        initPopup(petsData);
+        
         if (sliderGrid) {
             initSlider(petsData, sliderGrid);
-            initPopup(petsData);
+   
             
         } else if (catalogGrid) {
-            renderPets(petsData, catalogGrid);
-            initPopup(petsData);
+            initPagination(petsData, catalogGrid);
         }
     }
 }

@@ -26,7 +26,6 @@ export function initSlider(petsData, gridElement) {
         gridElement.style.opacity = 0;
 
         setTimeout(() => {
-            // Теперь верстка идентична твоему renderPets
             gridElement.innerHTML = nextPets.map(pet => `
                 <article class="pet-card" data-name="${pet.name}">
                     <h2 class="visually-hidden">${pet.name}</h2>
