@@ -9,16 +9,14 @@
 
     order: -1;
     flex: 0 0 100%;
-}
 
+    transition: opacity 0.3s ease-in-out;
+}
 
 .page-pets__grid .pet-card {
     display: flex;
 }
 
-.page-pets__grid .pet-card:nth-child(n+4) {
-    display: none;
-}
 
 @media (min-width: 48rem) {
     .page-pets__grid {
@@ -28,10 +26,7 @@
         order: 0;
         flex: 0 1 auto;
     }
-
-    .page-pets__grid .pet-card:nth-child(-n+6) {
-        display: flex;
-    }
+    
 
 }
 
@@ -40,9 +35,4 @@
         grid-template-columns: repeat(4, 1fr);
         gap: 5.625rem;
     }
-    
-    .page-pets__grid .pet-card:nth-child(-n+8) {
-        display: flex;
-    }
-    
 }

@@ -9,50 +9,55 @@ export function initSlider(petsData, gridElement) {
         const width = window.innerWidth;
         if (width >= 1280) return 3;
         if (width >= 768) return 2;
-        return 1;
+        return 1;     
     };
 
     const getNextPets = () => {
         const count = getVisibleCount();
         let available = petsData.filter(p => !currentPets.some(cp => cp.name === p.name));
-        if (available.length < count) available = [...petsData];
-        return [...available].sort(() => 0.5 - Math.random()).slice(0, count);
+        let next = [...available].sort(() => 0.5 - Math.random()).slice(0, count);
+
+        while (next.length < count) {
+            let randomPet = petsData[Math.floor(Math.random() * petsData.length)];
+            if (!next.some(p => p.name === randomPet.name) && !currentPets.some(p => p.name === randomPet.name)) {
+                next.push(randomPet);
+            }
+        }
+        return next;
     };
 
     const render = () => {
-        const nextPets = getNextPets();
-
-        gridElement.style.transition = 'opacity 0.3s ease-in-out';
-        gridElement.style.opacity = 0;
+        isAnimating = true;
+        
+        gridElement.style.opacity = '0';
+        gridElement.style.transform = 'translateY(10px)';
 
         setTimeout(() => {
+            const nextPets = getNextPets();
+            
             gridElement.innerHTML = nextPets.map(pet => `
                 <article class="pet-card" data-name="${pet.name}">
-                    <h2 class="visually-hidden">${pet.name}</h2>
                     <figure class="pet-card__figure">
-                        <img src="${pet.img}" 
-                             alt="${pet.name} - ${pet.breed}" 
-                             width="270" height="270" 
-                             loading="lazy" decoding="async" 
-                             class="pet-card__image">
+                        <img src="${pet.img}" alt="${pet.name}" class="pet-card__image" loading="lazy">
                         <figcaption class="pet-card__name">${pet.name}</figcaption>
                     </figure>
                     <button class="pet-card__button" type="button">Learn more</button>
                 </article>
             `).join('');
+            
+            gridElement.style.opacity = '1';
+            gridElement.style.transform = 'translateY(0)';
 
-            gridElement.style.opacity = 1;
             currentPets = nextPets;
             isAnimating = false;
         }, 300);
     };
-
+    
     currentPets = getNextPets();
     render();
 
     buttons.forEach(btn => btn.addEventListener('click', () => {
         if (isAnimating) return;
-        isAnimating = true;
         render();
     }));
 }

@@ -66,15 +66,13 @@
 
     transition: opacity 0.3s ease-in-out;
     opacity: 1;
+    transform: translateY(0);
 }
 
 .page-pets__grid--fading {
     opacity: 0;
 }
 
-.pets__grid .pet-card:nth-child(n+2) {
-    display: none;
-}
 
 .arrow-btn:first-of-type {
     order: 1; /* arrow prev first */
@@ -204,14 +202,6 @@
         grid-template-columns: repeat(4, 1fr);
         row-gap: 1.875rem;
         column-gap: 2.5rem;
-    }
-
-    .pets__grid .pet-card:nth-child(3) {
-        display: flex;
-    }
-
-    .pets__grid--4cols .pet-card:nth-child(n+2) {
-        display: flex;
     }
     
     .pets__content {
