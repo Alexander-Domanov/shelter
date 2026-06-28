@@ -1,25 +1,22 @@
 @import url('./base/reset.css');
 @import url('./base/variables.css');
 @import url('./base/typography.css');
-@import url('./components/button.css');
-@import url('./components/icon.css');
-@import url('./components/container.css');
-@import url('./components/header.css');
-@import url('./components/hero.css');
-@import url('./components/about.css');
-@import url('./components/pets.css');
-@import url('./components/help.css');
-@import url('./components/donation.css');
-@import url('./components/footer.css');
-@import url('./components/page-pets.css');
+@import url('./base/utilities.css');
 
-.visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    padding: 0;
-    border: 0;
-    clip: rect(0, 0, 0, 0);
-    overflow: hidden;
-}
+@import url('./blocks/page.css');
+@import url('./blocks/container.css');
+@import url('./blocks/gradient.css');
+
+@import url('./blocks/button.css');
+@import url('./blocks/popup.css');
+@import url('./blocks/icon.css');
+
+@import url('./blocks/header.css');
+@import url('./blocks/hero.css');
+@import url('./blocks/about.css');
+@import url('./blocks/pets.css');
+@import url('./blocks/help.css');
+@import url('./blocks/donation.css');
+@import url('./blocks/footer.css');
+
+@import url('./blocks/page-pets.css');

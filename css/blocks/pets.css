@@ -56,12 +56,20 @@
     display: grid;
     grid-template-columns: 1fr;
     gap: 5.625rem;
+    min-height: 430px;
 
     justify-items: center;
     align-items: center;
 
     order: -1;
     flex: 0 0 100%;
+
+    transition: opacity 0.3s ease-in-out;
+    opacity: 1;
+}
+
+.page-pets__grid--fading {
+    opacity: 0;
 }
 
 .pets__grid .pet-card:nth-child(n+2) {
@@ -123,20 +131,9 @@
    PETS PAGE
    ========================================================================== */
 
-/* Modifier for pets page – 4 columns */
-/*.pets__grid--4cols {*/
-/*    grid-template-columns: repeat(1, 1fr);*/
-/*    row-gap: 1.875rem;*/
-/*    column-gap: 2.5rem;*/
-/*}*/
-
-/*.pets__grid--4cols .pet-card:nth-child(-n+3) {*/
-/*    display: flex;*/
-/*}*/
-
 .pets__pagination {
     display: flex;
-    gap: 1.25rem;
+    gap: 0.625rem;
     align-items: center;
 }
 
@@ -220,5 +217,9 @@
     .pets__content {
         gap: 3.3125rem;
         flex-wrap: nowrap;
+    }
+
+    .pets__pagination {
+        gap: 1.25rem;
     }
 }
