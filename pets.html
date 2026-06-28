@@ -16,13 +16,12 @@
     <meta name="apple-mobile-web-app-title" content="Shelter">
     <!--    <link rel="manifest" href="./assets/favicon/site.webmanifest">-->
     <!--    -->
+    <script type="module" src="./js/main.js" defer></script>
 </head>
-<body>
+<body class="page">
 
 <!-- ======== HEADER BEGIN ======== -->q
 <header class="header header--light">
-    
-    <!-- Logo-->
     <div class="header__container header--padding">
         <div>
             <a href="./">
@@ -42,11 +41,11 @@
         </button>
 
         <!-- Navigation-->
-        <nav class="header__nav">
-            <a href="./index.html#about">About the shelter</a>
-            <a href="pets.html" aria-current="page">Our pets</a>
-            <a href="./index.html#help">Help the shelter</a>
-            <a href="./index.html#contacts">Contacts</a>
+        <nav id="primary-navigation" class="header__nav">
+            <a href="#about" aria-current="page">About the shelter</a>
+            <a href="pets.html">Our pets</a>
+            <a href="#help">Help the shelter</a>
+            <a href="#contacts">Contacts</a>
         </nav>
     </div>
 </header>
@@ -59,126 +58,7 @@
             <h2 class="pets__title pets__title--dark">Our friends who <br> are looking for a house</h2>
 
             <div class="pets__content">
-                <div class="page-pets__grid">
-                    <article class="pet-card">
-                        <h2 class="visually-hidden">Katrine</h2>
-                        <figure class="pet-card__figure">
-                            <img src="./assets/images/pets/pets-katrine.png"
-                                 alt="Katrine - a graceful British Shorthair cat"
-                                 width="270"
-                                 height="270"
-                                 loading="lazy"
-                                 decoding="async"
-                                 class="pet-card__image">
-                            <figcaption class="pet-card__name">Katrine</figcaption>
-                        </figure>
-                        <button class="pet-card__button" type="button">Learn more</button>
-                    </article>
-
-                    <article class="pet-card">
-                        <h2 class="visually-hidden">Jennifer</h2>
-                        <figure class="pet-card__figure">
-                            <img src="./assets/images/pets/pets-jennifer.png"
-                                 alt="Jennifer - a cheerful and energetic dog"
-                                 width="270"
-                                 height="270"
-                                 loading="lazy"
-                                 decoding="async"
-                                 class="pet-card__image">
-                            <figcaption class="pet-card__name">Jennifer</figcaption>
-                        </figure>
-                        <button class="pet-card__button" type="button">Learn more</button>
-                    </article>
-
-                    <article class="pet-card">
-                        <h2 class="visually-hidden">Woody</h2>
-                        <figure class="pet-card__figure">
-                            <img src="./assets/images/pets/pets-woody.png"
-                                 alt="Woody - a friendly and loyal dog"
-                                 width="270"
-                                 height="270"
-                                 loading="lazy"
-                                 decoding="async"
-                                 class="pet-card__image">
-                            <figcaption class="pet-card__name">Woody</figcaption>
-                        </figure>
-                        <button class="pet-card__button" type="button">Learn more</button>
-                    </article>
-
-                    <article class="pet-card">
-                        <h2 class="visually-hidden">Sophia</h2>
-                        <figure class="pet-card__figure">
-                            <img src="./assets/images/pets/dogs-katrine.png"
-                                 alt="Sophia - a calm and loving dog"
-                                 width="270"
-                                 height="270"
-                                 loading="lazy"
-                                 decoding="async"
-                                 class="pet-card__image">
-                            <figcaption class="pet-card__name">Sophia</figcaption>
-                        </figure>
-                        <button class="pet-card__button" type="button">Learn more</button>
-                    </article>
-
-                    <article class="pet-card">
-                        <h2 class="visually-hidden">Timmy</h2>
-                        <figure class="pet-card__figure">
-                            <img src="./assets/images/pets/pets-timmy.png"
-                                 alt="Timmy - a playful and curious dog"
-                                 width="270"
-                                 height="270"
-                                 loading="lazy"
-                                 decoding="async"
-                                 class="pet-card__image">
-                            <figcaption class="pet-card__name">Timmy</figcaption>
-                        </figure>
-                        <button class="pet-card__button" type="button">Learn more</button>
-                    </article>
-
-                    <article class="pet-card">
-                        <h2 class="visually-hidden">Charly</h2>
-                        <figure class="pet-card__figure">
-                            <img src="./assets/images/pets/pets-charly.png"
-                                 alt="Charly - a sweet and gentle dog"
-                                 width="270"
-                                 height="270"
-                                 loading="lazy"
-                                 decoding="async"
-                                 class="pet-card__image">
-                            <figcaption class="pet-card__name">Charly</figcaption>
-                        </figure>
-                        <button class="pet-card__button" type="button">Learn more</button>
-                    </article>
-
-                    <article class="pet-card">
-                        <h2 class="visually-hidden">Scarlett</h2>
-                        <figure class="pet-card__figure">
-                            <img src="./assets/images/pets/pets-scarlet.png"
-                                 alt="Scarlet - a beautiful and elegant dog"
-                                 width="270"
-                                 height="270"
-                                 loading="lazy"
-                                 decoding="async"
-                                 class="pet-card__image">
-                            <figcaption class="pet-card__name">Scarlett</figcaption>
-                        </figure>
-                        <button class="pet-card__button" type="button">Learn more</button>
-                    </article>
-
-                    <article class="pet-card">
-                        <h2 class="visually-hidden">Freddie</h2>
-                        <figure class="pet-card__figure">
-                            <img src="./assets/images/pets/cats-katrine.png"
-                                 alt="Freddie - a mischievous and fun-loving cat"
-                                 width="270"
-                                 height="270"
-                                 loading="lazy"
-                                 decoding="async"
-                                 class="pet-card__image">
-                            <figcaption class="pet-card__name">Freddie</figcaption>
-                        </figure>
-                        <button class="pet-card__button" type="button">Learn more</button>
-                    </article>
+                <div class="page-pets__grid ">
                 </div>
             </div>
 
@@ -291,5 +171,13 @@
     </div>
 </footer>
 <!-- ======== FOOTER END ======== -->
+
+<!-- ======== POPUP START ======== -->
+<dialog id="pet-popup" class="popup">
+    <button class="popup__close" aria-label="Close popup">✕</button>
+    <div class="popup__container">
+    </div>
+</dialog>
+<!-- ======== POPUP END ======== -->
 </body>
 </html>

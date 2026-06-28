@@ -123,17 +123,6 @@
    PETS PAGE
    ========================================================================== */
 
-/* Modifier for pets page – 4 columns */
-/*.pets__grid--4cols {*/
-/*    grid-template-columns: repeat(1, 1fr);*/
-/*    row-gap: 1.875rem;*/
-/*    column-gap: 2.5rem;*/
-/*}*/
-
-/*.pets__grid--4cols .pet-card:nth-child(-n+3) {*/
-/*    display: flex;*/
-/*}*/
-
 .pets__pagination {
     display: flex;
     gap: 1.25rem;

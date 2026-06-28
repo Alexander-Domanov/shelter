@@ -17,6 +17,13 @@
 }
 
 @media (max-width: 47.9375rem) {
+    html:has(.hamburger[aria-expanded="true"]),
+    body:has(.hamburger[aria-expanded="true"]),
+    .page:has(.hamburger[aria-expanded="true"]) {
+        overflow: hidden;
+        height: 100vh;
+    }
+    
     .page:has(.hamburger[aria-expanded="true"])::before {
         opacity: 1;
         pointer-events: auto;

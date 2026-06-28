@@ -15,9 +15,9 @@
 <!--    <link rel="manifest" href="./assets/favicon/site.webmanifest">-->
 <!--    -->
     <link rel="stylesheet" href="./css/styles.css">
-    <script src="./js/main.js" defer></script>
+    <script type="module" src="./js/main.js" defer></script>
 </head>
-<body>
+<body class="page">
 <!-- ======== HEADER BEGIN ======== -->
 <header class="header gradient--primary ">
     <div class="header__container">
@@ -39,7 +39,7 @@
         </button>
 
         <!-- Navigation-->
-        <nav class="header__nav">
+        <nav id="primary-navigation" class="header__nav">
             <a href="#about" aria-current="page">About the shelter</a>
             <a href="pets.html">Our pets</a>
             <a href="#help">Help the shelter</a>
@@ -183,52 +183,7 @@
                     </svg>
                 </button>
 
-                <div class="pets__grid">
-                    <article class="pet-card">
-                        <h2 class="visually-hidden">Katrine</h2>
-                        <figure class="pet-card__figure">
-                            <img src="./assets/images/pets/pets-katrine.png"
-                                 alt="Katrine - a graceful British Shorthair cat"
-                                 width="270"
-                                 height="270"
-                                 loading="lazy"
-                                 decoding="async"
-                                 class="pet-card__image">
-                            <figcaption class="pet-card__name">Katrine</figcaption>
-                        </figure>
-                        <button class="pet-card__button" type="button">Learn more</button>
-                    </article>
-
-                    <article class="pet-card">
-                        <h2 class="visually-hidden">Jennifer</h2>
-                        <figure class="pet-card__figure">
-                            <img src="./assets/images/pets/pets-jennifer.png"
-                                 alt="Jennifer - a cheerful and energetic dog"
-                                 width="270"
-                                 height="270"
-                                 loading="lazy"
-                                 decoding="async"
-                                 class="pet-card__image">
-                            <figcaption class="pet-card__name">Jennifer</figcaption>
-                        </figure>
-                        <button class="pet-card__button" type="button">Learn more</button>
-                    </article>
-
-                    <article class="pet-card">
-                        <h2 class="visually-hidden">Woody</h2>
-                        <figure class="pet-card__figure">
-                            <img src="./assets/images/pets/pets-woody.png"
-                                 alt="Woody - a friendly and loyal dog"
-                                 width="270"
-                                 height="270"
-                                 loading="lazy"
-                                 decoding="async"
-                                 class="pet-card__image">
-                            <figcaption class="pet-card__name">Woody</figcaption>
-                        </figure>
-                        <button class="pet-card__button" type="button">Learn more</button>
-                    </article>
-                </div>
+                <div class="pets__grid"></div>
 
                 <button class="arrow-btn" aria-label="Next slide">
                     <svg class="icon icon--arrow-right" width="14" height="6" aria-hidden="true">
@@ -411,5 +366,13 @@
     </div>
 </footer>
 <!-- ======== FOOTER END ======== -->
+
+<!-- ======== POPUP START ======== -->
+<dialog id="pet-popup" class="popup">
+    <button class="popup__close" aria-label="Close popup">✕</button>
+    <div class="popup__container">
+    </div>
+</dialog>
+<!-- ======== POPUP END ======== -->
 </body>
 </html>

@@ -1,28 +1,34 @@
-console.log(`=== SHELTER PART 1 SELF-ASSESSMENT ===
-Main page: 70/70
-  - Markup validation: +10
-  - Logo text, one h1, favicon: +5
-  - Header: +5
-  - Not only: +5
-  - About: +5
-  - Our Friends: +5
-  - Help: +5
-  - In addition: +5
-  - Footer: +5
-  - Help block grid: +5
-  - Centered >1280px: +5
-  - BG full width: +5
-  - Navigation (highlight, interactive, anchors): +5
-  - Pet cards hover (smooth, no jump): +5
+import { initHamburger } from './modules/hamburger.js';
+import { initResizeAnimationStopper } from './modules/utils.js';
+import { renderPets } from './modules/renderPets.js';
+import { initPopup } from './modules/popup.js';
 
-Pets page: 40/40
-  - Markup validation: +5
-  - Logo text, one h1, favicon: +5
-  - Header: +5
-  - Our Friends: +5
-  - Footer: +5
-  - Centered >1280px + BG full width: +5
-  - Navigation + pagination disabled state: +5
-  - Pet cards hover: +5
+async function loadPets() {
+    try {
+        const response = await fetch('./data/pets.json');
+        if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+        return await response.json();
+    } catch (error) {
+        console.error("Loading error:", error);
+        return null;
+    }
+}
 
-TOTAL: 110/110`);
+async function initApp() {
+    initHamburger();
+    initResizeAnimationStopper();
+
+    const petsData = await loadPets();
+    
+    if (petsData) {
+        const grid = document.querySelector('.pets__grid') || document.querySelector('.page-pets__grid');
+
+        if (grid) {
+            renderPets(petsData, grid);
+            
+            initPopup(petsData);
+        }
+    }
+}
+
+initApp().catch(err => console.error("Critical init error:", err));
