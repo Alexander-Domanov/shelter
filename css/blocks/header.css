@@ -18,12 +18,12 @@
 }
 
 /* ==========================================================================
-   Logo & Subtitle (Elements)
+   Logo & Subtitle 
    ========================================================================== */
 
 .header__title {
     margin: 0;
-    
+
     font-family: var(--font-family-serif);
     font-size: 2rem;
     line-height: 1.1;
@@ -66,7 +66,53 @@
 }
 
 /* ==========================================================================
-   Three stripes
+   Mobile Navigation Menu <= 768px
+   ========================================================================== */
+
+@media (max-width: 47.9375rem) {
+    #primary-navigation {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 100%;
+        max-width: 20rem;
+        height: 100vh;
+        background-color: #292929;
+        z-index: 999;
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2.5rem;
+        
+        translate: 100% 0;
+    }
+    
+    #primary-navigation a {
+        color: #cdcdcd;
+        text-decoration: none;
+        font-size: 2rem;
+        font-family: Arial, sans-serif;
+    }
+
+    #primary-navigation a:hover,
+    #primary-navigation a[aria-current="page"] {
+        color: #fafafa;
+    }
+
+    .header__container:has(.hamburger[aria-expanded="true"]) #primary-navigation,
+    .header__container:has(.hamburger[aria-expanded="false"]) #primary-navigation {
+        transition: translate 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+    
+    .header__container:has(.hamburger[aria-expanded="true"]) #primary-navigation {
+        translate: 0 0;
+    }
+}
+
+/* ==========================================================================
+   Hamburger Three stripes
    ========================================================================== */
 
 .hamburger-box {
@@ -75,6 +121,8 @@
     display: block;
     width: 1.875rem;
     height: 1.375rem;
+
+    transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
 .hamburger-inner {
@@ -119,6 +167,13 @@
     top: 0.625rem;
 }
 
+/* ==========================================================================
+   Hamburger Active State
+   ========================================================================== */
+
+.hamburger[aria-expanded="true"] .hamburger-box {
+    transform: rotate(90deg);
+}
 
 /* ==========================================================================
    Light version (pets page)
@@ -129,7 +184,6 @@
 .header--light .hamburger-inner::after {
     background-color: var(--color-dark-l);
 }
-
 
 /* ==========================================================================
    Modifier: Light background (pets page)
@@ -152,12 +206,8 @@
 }
 
 /* ==========================================================================
-   Navigation
+   Navigation (Базовые десктопные стили для ссылок)
    ========================================================================== */
-
-.header__nav {
-    display: none;
-}
 
 .header__nav a {
     border-bottom: 0.1875rem solid transparent;
@@ -183,12 +233,13 @@
 }
 
 /* ==========================================================================
-   Tablet
+   Tablet & Desktop — КАК БЫЛО ОТ 768px
    ========================================================================== */
 
-@media (min-width: 48rem) {
+@media (min-width: 47.9375rem) {
     .header__nav {
         display: flex;
         gap: 2.1875rem;
     }
 }
+
