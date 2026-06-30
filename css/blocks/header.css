@@ -185,7 +185,8 @@
 .header--light .hamburger-inner,
 .header--light .hamburger-inner::before,
 .header--light .hamburger-inner::after {
-    background-color: var(--color-dark-l);
+    background-color: #545454;
+    z-index: 1000;
 }
 
 /* ==========================================================================
