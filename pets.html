@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shelter - Our Pets</title>
+    <meta name="description" content="Browse our pets available for adoption at the animal shelter. Meet our dogs, cats, and other animals searching for their forever home.">
+    <link rel="stylesheet" href="./css/styles.css">
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" href="./assets/favicon/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/svg+xml" href="./assets/favicon/favicon.svg">
+    <link rel="shortcut icon" href="./assets/favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png">
+    <meta name="apple-mobile-web-app-title" content="Shelter">
+    <!--    <link rel="manifest" href="./assets/favicon/site.webmanifest">-->
+    <script type="module" src="./js/main.js" defer></script>
+</head>
+<body class="page">
+
+<!-- ======== HEADER BEGIN ======== -->q
+<header class="header header--light">
+    <div class="header__container header--padding">
+        <div>
+            <a href="./">
+                <h1 class="header__title">Cozy House</h1>
+                <p class="header__subtitle">Shelter for pets in Boston</p>
+            </a>
+        </div>
+
+        <!-- Burger menu -->
+        <button class="hamburger"
+                aria-label="Toggle navigation menu"
+                aria-expanded="false"
+                aria-controls="primary-navigation">
+            <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+             </span>
+        </button>
+
+        <!-- Navigation-->
+        <nav id="primary-navigation" class="header__nav">
+            <a href="index.html#about">About the shelter</a>
+            <a href="pets.html" aria-current="page">Our pets</a>
+            <a href="index.html#help">Help the shelter</a>
+            <a href="index.html#contacts">Contacts</a>
+        </nav>
+    </div>
+</header>
+<!-- ======== HEADER END ======== -->
+
+<main>
+    <!-- ======== PETS CONTENT START ======== -->
+    <section class="pets">
+        <div class="pets__container container">
+            <h2 class="pets__title pets__title--dark">Our friends who <br> are looking for a house</h2>
+
+            <div class="pets__content">
+                <div class="page-pets__grid ">
+                </div>
+            </div>
+
+            <div class="pets__pagination">
+                <!-- button pagination left (double arrow) -->
+                <button class="arrow-btn" type="button" disabled aria-label="First page">
+                    <svg class="icon" width="10" height="11" aria-hidden="true">
+                        <use href="./assets/icons/sprite.svg#arrow2"></use>
+                    </svg>
+                    <svg class="icon" width="10" height="11" aria-hidden="true">
+                        <use href="./assets/icons/sprite.svg#arrow2"></use>
+                    </svg>
+                </button>
+
+                <!-- button pagination left (one arrow) -->
+                <button class="arrow-btn" type="button" disabled aria-label="Previous page">
+                    <svg class="icon" width="10" height="11" aria-hidden="true">
+                        <use href="./assets/icons/sprite.svg#arrow2"></use>
+                    </svg>
+                </button>
+
+                <!-- button pagination number -->
+                <button class="arrow-btn pets__pagination--text" type="button" aria-label="Page 1">1</button>
+
+                <!-- button pagination right (first arrow) -->
+                <button class="arrow-btn" type="button" aria-label="Next page">
+                    <svg class="icon icon--arrow-right" width="10" height="11" aria-hidden="true">
+                        <use href="./assets/icons/sprite.svg#arrow2"></use>
+                    </svg>
+                </button>
+
+                <!-- button pagination right (double arrow) -->
+                <button class="arrow-btn" type="button" aria-label="Last page">
+                    <svg class="icon icon--arrow-right" width="10" height="11" aria-hidden="true">
+                        <use href="./assets/icons/sprite.svg#arrow2"></use>
+                    </svg>
+                    <svg class="icon icon--arrow-right" width="10" height="11" aria-hidden="true">
+                        <use href="./assets/icons/sprite.svg#arrow2"></use>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </section>
+    <!-- ======== PETS CONTENT END ======== -->
+</main>
+
+<!-- ======== FOOTER START ======== -->
+<footer id="contacts" class="footer gradient--footer">
+    <div class="footer__container container">
+        <!-- COLUMN 1: QUESTION AND OFFERS START -->
+        <div class="footer__column">
+            <h3 class="footer__title">For questions <br> and suggestions</h3>
+            <ul class="footer__contact-list">
+                <li class="footer__contact-item">
+                    <svg class="footer__icon" width="40" height="32" aria-hidden="true" focusable="false">
+                        <use href="./assets/icons/sprite.svg#email"></use>
+                    </svg>
+                    <a href="mailto:email@shelter.com" class="footer__link">email@shelter.com</a>
+                </li>
+                <li class="footer__contact-item">
+                    <svg class="footer__icon" width="40" height="32" aria-hidden="true" focusable="false">
+                        <use href="./assets/icons/sprite.svg#phone"></use>
+                    </svg>
+                    <a href="tel:+136745677554" class="footer__link">+13 674 567 75 54</a>
+                </li>
+            </ul>
+        </div>
+        <!-- COLUMN 1: QUESTION AND OFFERS END -->
+
+        <!-- COLUMN 2: ADDRESS START -->
+        <div class="footer__column">
+            <h3 class="footer__title">We are waiting <br> for your visit</h3>
+            <ul class="footer__contact-list">
+                <li class="footer__contact-item">
+                    <svg class="footer__icon" width="22" height="32" aria-hidden="true" focusable="false">
+                        <use href="./assets/icons/sprite.svg#pin"></use>
+                    </svg>
+                    <address class="footer__address">
+                        <a href="https://maps.google.com/?q=1+Central+Street+Boston" target="_blank"
+                           rel="noopener noreferrer">
+                            1 Central Street, Boston <br> (entrance from the store)
+                        </a>
+                    </address>
+                </li>
+                <li class="footer__contact-item">
+                    <svg class="footer__icon" width="22" height="32" aria-hidden="true" focusable="false">
+                        <use href="./assets/icons/sprite.svg#pin"></use>
+                    </svg>
+                    <address class="footer__address">
+                        <a href="https://maps.google.com/?q=18+South+Park+London" target="_blank"
+                           rel="noopener noreferrer">
+                            18 South Park, London
+                        </a>
+                    </address>
+                </li>
+            </ul>
+        </div>
+        <!-- COLUMN 2: ADDRESS END -->
+
+        <!-- COLUMN 3: IMAGE START -->
+        <div class="footer__image">
+            <img src="./assets/images/footer/footer-puppy.png"
+                 alt="A cute puppy"
+                 width="300"
+                 height="310"
+                 loading="lazy"
+                 decoding="async">
+        </div>
+        <!-- COLUMN 3: IMAGE END -->
+    </div>
+</footer>
+<!-- ======== FOOTER END ======== -->
+
+<!-- ======== POPUP START ======== -->
+<dialog id="pet-popup" class="popup">
+    <button class="popup__close" aria-label="Close popup">✕</button>
+    <div class="popup__container">
+    </div>
+</dialog>
+<!-- ======== POPUP END ======== -->
+</body>
+</html>

@@ -1,0 +1,26 @@
+@import url('../base/variables.css');
+
+/* ==========================================================================
+   Gradients
+   ========================================================================== */
+
+/* Primary gradient — used for header + hero section */
+.gradient--primary {
+    background: linear-gradient(
+            to right,
+            var(--gradient-start),
+            var(--gradient-middle),
+            var(--gradient-end)
+    );
+}
+
+
+/* Footer gradient — used for footer section only */
+.gradient--footer {
+    background: linear-gradient(
+            to right,
+            var(--footer-gradient-start),
+            var(--footer-gradient-middle),
+            var(--footer-gradient-end)
+    );
+}

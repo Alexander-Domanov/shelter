@@ -1,0 +1,22 @@
+@import url('./base/reset.css');
+@import url('./base/variables.css');
+@import url('./base/typography.css');
+@import url('./base/utilities.css');
+
+@import url('./blocks/page.css');
+@import url('./blocks/container.css');
+@import url('./blocks/gradient.css');
+
+@import url('./blocks/button.css');
+@import url('./blocks/popup.css');
+@import url('./blocks/icon.css');
+
+@import url('./blocks/header.css');
+@import url('./blocks/hero.css');
+@import url('./blocks/about.css');
+@import url('./blocks/pets.css');
+@import url('./blocks/help.css');
+@import url('./blocks/donation.css');
+@import url('./blocks/footer.css');
+
+@import url('./blocks/page-pets.css');

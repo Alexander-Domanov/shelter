@@ -1,0 +1,38 @@
+.page-pets__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 5.625rem;
+
+    justify-items: center;
+    align-items: center;
+    min-height: 930px;
+
+    order: -1;
+    flex: 0 0 100%;
+
+    transition: opacity 0.3s ease-in-out;
+}
+
+.page-pets__grid .pet-card {
+    display: flex;
+}
+
+
+@media (min-width: 48rem) {
+    .page-pets__grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2.5rem;
+
+        order: 0;
+        flex: 0 1 auto;
+    }
+    
+
+}
+
+@media (min-width: 80rem) {
+    .page-pets__grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 5.625rem;
+    }
+}

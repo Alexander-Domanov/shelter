@@ -1,0 +1,31 @@
+/* ==========================================================================
+   Page Overlay
+   ========================================================================== */
+
+.page::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 998;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+}
+
+@media (max-width: 47.9375rem) {
+    html:has(.hamburger[aria-expanded="true"]),
+    body:has(.hamburger[aria-expanded="true"]),
+    .page:has(.hamburger[aria-expanded="true"]) {
+        overflow: hidden;
+        height: 100vh;
+    }
+    
+    .page:has(.hamburger[aria-expanded="true"])::before {
+        opacity: 1;
+        pointer-events: auto;
+    }
+}

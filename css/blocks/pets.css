@@ -1,0 +1,215 @@
+@import url('../base/variables.css');
+
+/* ==========================================================================
+   PETS CONTAINER
+   ========================================================================== */
+
+.pets {
+    background: var(--color-background-gray) ;
+}
+
+.pets__container {
+    display: flex;
+    flex-direction: column;
+    gap: 2.625rem;
+    align-items: center;
+
+    padding-top: 2.625rem;
+    padding-bottom: 2.625rem;
+}
+
+.pets__title {
+    max-width: 28rem;
+    
+    margin: 0 auto;
+    
+    text-align: center;
+}
+
+.pets__title--dark {
+    color: var(--color-dark-l);
+}
+
+.pets__content {
+    display: flex;
+    
+    justify-content: center;
+    align-items: center;
+    row-gap: 1.25rem;
+    column-gap: 5rem;
+    
+    flex-wrap: wrap;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 0.0625rem;
+    height: 0.0625rem;
+    margin: -0.0625rem;
+    padding: 0;
+    border: 0;
+    clip: rect(0, 0, 0, 0);
+    overflow: hidden;
+}
+
+.pets__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 5.625rem;
+    min-height: 430px;
+
+    justify-items: center;
+    align-items: center;
+
+    order: -1;
+    flex: 0 0 100%;
+
+    transition: opacity 0.3s ease-in-out;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.page-pets__grid--fading {
+    opacity: 0;
+}
+
+
+.arrow-btn:first-of-type {
+    order: 1; /* arrow prev first */
+    flex: 0 0 auto;
+}
+
+.arrow-btn:last-of-type {
+    order: 2; /* arrow next last */
+    flex: 0 0 auto;
+}
+
+.pet-card {
+    max-width: 16.875rem;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.875rem;
+    
+    background-color: var(--color-light-s);
+    padding-bottom: 1.875rem;
+
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.pet-card:hover {
+    background-color: var(--color-light-xl);
+    box-shadow: 0 0.625rem 1.25rem rgba(0, 0, 0, 0.1);
+}
+
+.pet-card__figure {
+    display: flex;
+    flex-direction: column;
+    gap: 1.875rem;
+}
+
+.pet-card__name {
+    font-family: var(--font-family-serif);
+    font-size: 1.25rem;
+    letter-spacing: 0.06em;
+    text-align: center;
+    line-height: 1;
+    color: var(--color-dark-l);
+
+    transition: color 0.3s ease;
+}
+
+.pet-card img {
+    aspect-ratio: 270/270;
+}
+
+/* ==========================================================================
+   PETS PAGE
+   ========================================================================== */
+
+.pets__pagination {
+    display: flex;
+    gap: 0.625rem;
+    align-items: center;
+}
+
+.pets__pagination--text {
+    font-family: var(--font-family-serif);
+    font-size: 1.25rem;
+    line-height: 1.14;
+    letter-spacing: 0.06em;
+    text-align: center;
+    color: var(--color-dark-3xl);
+}
+
+@media (min-width: 48rem) {
+    .pets__container {
+        padding-top: 5rem;
+        padding-bottom: 100px;
+
+        gap: 3.75rem;
+    }
+    
+    .pets__content {
+        justify-content: space-between;
+        align-items: center;
+        gap: 0.75rem;
+        flex-wrap: nowrap;
+    }
+
+    .pets__grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2.5rem;
+
+        order: 0;
+        flex: 0 1 auto;
+    }
+
+    .pets__grid .pet-card:nth-child(2) {
+        display: flex;
+    }
+
+    .pets__grid--4cols .pet-card:nth-child(-n+6) {
+        display: flex;
+    }
+
+    .arrow-btn:first-of-type,
+    .arrow-btn:last-of-type {
+        order: 0;
+    }
+    
+}
+
+@media (min-width: 80rem) {
+    .pets__container {
+        padding-top: 5rem;
+        padding-bottom: 100px;
+    }
+
+    .pets__grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 5.625rem;
+    }
+
+ /* ==========================================================================
+    PETS PAGE
+    ========================================================================== */
+    
+    /* Modifier for pets page – 4 columns */
+    .pets__grid--4cols {
+        grid-template-columns: repeat(4, 1fr);
+        row-gap: 1.875rem;
+        column-gap: 2.5rem;
+    }
+    
+    .pets__content {
+        gap: 3.3125rem;
+        flex-wrap: nowrap;
+    }
+
+    .pets__pagination {
+        gap: 1.25rem;
+    }
+}

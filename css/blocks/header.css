@@ -1,0 +1,248 @@
+@import url('../base/variables.css');
+@import url('gradient.css');
+
+/* ==========================================================================
+   Header Block
+   ========================================================================== */
+
+.header__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 80rem;
+    margin: 0 auto;
+    padding-top: 1.875rem;
+    padding-left: var(--padding-header-container);
+    padding-right: var(--padding-header-container);
+}
+
+.header--padding {
+    padding-bottom: 1.875rem;
+}
+/* ==========================================================================
+   Logo & Subtitle 
+   ========================================================================== */
+
+.header__title {
+    margin: 0;
+
+    font-family: var(--font-family-serif);
+    font-size: 2rem;
+    line-height: 1.1;
+    letter-spacing: 0.06em;
+}
+
+.header__subtitle {
+    margin-top: 0.625rem;
+
+    font-size: 0.8125rem;
+    line-height: 1;
+    letter-spacing: 0.1em;
+    text-align: center;
+}
+
+/* ==========================================================================
+   Hamburger Button
+   ========================================================================== */
+
+.hamburger {
+    position: relative;
+    z-index: 1000;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 1.875rem;
+    min-height: 1.375rem;
+
+    background: transparent;
+    border: none;
+
+    cursor: pointer;
+}
+
+@media (min-width: 48rem) {
+    .hamburger {
+        display: none !important;
+    }
+}
+
+/* ==========================================================================
+   Mobile Navigation Menu <= 768px
+   ========================================================================== */
+
+@media (max-width: 47.9375rem) {
+    #primary-navigation {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 100%;
+        max-width: 20rem;
+        height: 100vh;
+        background-color: #292929;
+        z-index: 999;
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2.5rem;
+        
+        translate: 100% 0;
+    }
+    
+    #primary-navigation a {
+        color: #cdcdcd;
+        text-decoration: none;
+        font-size: 2rem;
+        font-family: Arial, sans-serif;
+    }
+
+    #primary-navigation a:hover,
+    #primary-navigation a[aria-current="page"] {
+        color: #fafafa;
+    }
+
+    .header__container:has(.hamburger[aria-expanded="true"]) #primary-navigation,
+    .header__container:has(.hamburger[aria-expanded="false"]) #primary-navigation {
+        transition: translate 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+    
+    .header__container:has(.hamburger[aria-expanded="true"]) #primary-navigation {
+        translate: 0 0;
+    }
+}
+
+/* ==========================================================================
+   Hamburger Three stripes
+   ========================================================================== */
+
+.hamburger-box {
+    position: relative;
+
+    display: block;
+    width: 1.875rem;
+    height: 1.375rem;
+
+    transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.hamburger-inner {
+    position: absolute;
+    top: 50%;
+    left: 0;
+
+    display: block;
+    width: 100%;
+    height: 0.125rem;
+
+    background-color: var(--color-primary);
+    border-radius: 0.125rem;
+
+    transform: translateY(-50%);
+    transition: background-color 0.3s ease;
+}
+
+.hamburger-inner::before,
+.hamburger-inner::after {
+    position: absolute;
+    left: 0;
+
+    display: block;
+    width: 100%;
+    height: 0.125rem;
+
+    content: '';
+
+    background-color: var(--color-primary);
+    border-radius: 0.125rem;
+
+    transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55),
+    background-color 0.3s ease;
+}
+
+.hamburger-inner::before {
+    top: -0.625rem;
+}
+
+.hamburger-inner::after {
+    top: 0.625rem;
+}
+
+/* ==========================================================================
+   Hamburger Active State
+   ========================================================================== */
+
+.hamburger[aria-expanded="true"] .hamburger-box {
+    transform: rotate(90deg);
+}
+
+/* ==========================================================================
+   Light version (pets page)
+   ========================================================================== */
+
+.header--light .hamburger-inner,
+.header--light .hamburger-inner::before,
+.header--light .hamburger-inner::after {
+    background-color: #545454;
+}
+
+/* ==========================================================================
+   Modifier: Light background (pets page)
+   ========================================================================== */
+
+.header--light .header__title,
+.header--light .header__subtitle {
+    color: var(--color-dark-l);
+}
+.header--light .header__nav a[aria-current="page"] {
+    color: var(--color-dark-l);
+}
+
+.header--light .header__nav a {
+    color: var(--color-dark-l);
+}
+.header--light .header__nav a:hover {
+    color: var(--color-dark-3xl);
+    border-bottom-color: var(--color-primary);
+}
+
+/* ==========================================================================
+   Navigation Base Style
+   ========================================================================== */
+
+.header__nav a {
+    border-bottom: 0.1875rem solid transparent;
+
+    color: var(--color-dark-s);
+
+    transition: border-color 0.3s ease, color 0.3s ease;
+}
+
+.header__nav a:hover {
+    border-bottom-color: var(--color-primary);
+
+    color: var(--color-light-s);
+}
+
+.header__nav a[aria-current="page"] {
+    border-bottom-color: var(--color-primary);
+
+    color: var(--color-light-s);
+
+    cursor: default;
+    pointer-events: none;
+}
+
+/* ==========================================================================
+   Tablet & Desktop
+   ========================================================================== */
+
+@media (min-width: 47.9375rem) {
+    .header__nav {
+        display: flex;
+        gap: 2.1875rem;
+    }
+}
+
